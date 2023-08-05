@@ -21,7 +21,12 @@ namespace PAWS_ProyectoFinal.Controllers
         // GET: Categoria
         public async Task<IActionResult> Index()
         {
-              return _context.Categoria != null ? 
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
+            return _context.Categoria != null ? 
                           View(await _context.Categoria.ToListAsync()) :
                           Problem("Entity set 'PAWSContext.Categoria'  is null.");
         }
@@ -29,6 +34,11 @@ namespace PAWS_ProyectoFinal.Controllers
         // GET: Categoria/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
             if (id == null || _context.Categoria == null)
             {
                 return NotFound();
@@ -47,6 +57,11 @@ namespace PAWS_ProyectoFinal.Controllers
         // GET: Categoria/Create
         public IActionResult Create()
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
             return View();
         }
 
@@ -57,6 +72,11 @@ namespace PAWS_ProyectoFinal.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,NombreCategoria")] Categoria categoria)
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Add(categoria);
@@ -69,6 +89,11 @@ namespace PAWS_ProyectoFinal.Controllers
         // GET: Categoria/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
             if (id == null || _context.Categoria == null)
             {
                 return NotFound();
@@ -89,6 +114,11 @@ namespace PAWS_ProyectoFinal.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,NombreCategoria")] Categoria categoria)
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
             if (id != categoria.Id)
             {
                 return NotFound();
@@ -120,6 +150,11 @@ namespace PAWS_ProyectoFinal.Controllers
         // GET: Categoria/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
             if (id == null || _context.Categoria == null)
             {
                 return NotFound();
@@ -140,6 +175,11 @@ namespace PAWS_ProyectoFinal.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
             if (_context.Categoria == null)
             {
                 return Problem("Entity set 'PAWSContext.Categoria'  is null.");

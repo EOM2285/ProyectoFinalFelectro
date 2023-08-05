@@ -10,7 +10,8 @@ namespace PAWS_ProyectoFinal.Models
         public string DescripcionProducto { get; set; }
         public int PrecioProducto { get; set; }        
         public bool EstadoProducto { get; set; }
-        public string ImagenProducto { get; set; }
+        
+        public string? ImagenProducto { get; set; }
         [NotMapped]
         public IFormFile? File { get; set; }
         public Categoria? Categoria { get;  set; }

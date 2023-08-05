@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "97lynr6Ub0WXFQwDzlA4q17ZmdTJKoz0gA6dpkuvH+s=",
+  "Hash": "Lvo+cSwwDH0W5jqVKpwjKiGKOJFEpGGCJcfMf/419SU=",
   "Source": "PAWS_ProyectoFinal",
   "BasePath": "_content/PAWS_ProyectoFinal",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\logos\\Cards Add.png",
+      "SourceId": "PAWS_ProyectoFinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\",
+      "BasePath": "_content/PAWS_ProyectoFinal",
+      "RelativePath": "imagenes/logos/Cards Add.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\logos\\Cards Add.png"
     },
     {
       "Identity": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\logos\\LogoFelectro.png",

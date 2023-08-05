@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\logos\\Cards Add.png",
+      "PackagePath": "staticwebassets\\imagenes\\logos\\Cards Add.png"
+    },
+    {
       "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\logos\\LogoFelectro.png",
       "PackagePath": "staticwebassets\\imagenes\\logos\\LogoFelectro.png"
     },

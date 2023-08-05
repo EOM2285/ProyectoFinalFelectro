@@ -21,6 +21,11 @@ namespace PAWS_ProyectoFinal.Controllers
         // GET: Producto
         public async Task<IActionResult> Index()
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
             var pAWSContext = _context.Producto.Include(p => p.Categoria);
             return View(await pAWSContext.ToListAsync());
         }
@@ -28,6 +33,12 @@ namespace PAWS_ProyectoFinal.Controllers
         // GET: Producto/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
             if (id == null || _context.Producto == null)
             {
                 return NotFound();
@@ -47,6 +58,10 @@ namespace PAWS_ProyectoFinal.Controllers
         // GET: Producto/Create
         public IActionResult Create()
         {
+            if ( HttpContext.Session.GetString("nombre") == null) 
+            {
+              return RedirectToAction("Index","InicioSesion");
+            }
             ViewData["CategoriaId"] = new SelectList(_context.Categoria, "Id", "NombreCategoria");
             return View();
         }
@@ -56,10 +71,17 @@ namespace PAWS_ProyectoFinal.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,CategoriaId,NombreProducto,DescripcionProducto,PrecioProducto,EstadoProducto,ImagenProducto")] Producto producto)
+        public async Task<IActionResult> Create([Bind("Id,CategoriaId,NombreProducto,DescripcionProducto,PrecioProducto,EstadoProducto,File")] Producto producto,IFormFile file)
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
             if (ModelState.IsValid)
             {
+
+                //-------------------------------------------------------------
                 byte[] bytes;
                 if (producto.File != null)
                 {
@@ -76,6 +98,8 @@ namespace PAWS_ProyectoFinal.Controllers
                     return RedirectToAction(nameof(Index));
 
                 }
+                //-------------------------------------------------------------
+
                 ViewData["CategoriaId"] = new SelectList(_context.Categoria, "Id", "NombreCategoria", producto.CategoriaId);
                 return View(producto);
             }
@@ -86,6 +110,11 @@ namespace PAWS_ProyectoFinal.Controllers
         // GET: Producto/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
             if (id == null || _context.Producto == null)
             {
                 return NotFound();
@@ -107,6 +136,12 @@ namespace PAWS_ProyectoFinal.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,CategoriaId,NombreProducto,DescripcionProducto,PrecioProducto,EstadoProducto,ImagenProducto")] Producto producto)
         {
+
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
             if (id != producto.Id)
             {
                 return NotFound();
@@ -139,6 +174,12 @@ namespace PAWS_ProyectoFinal.Controllers
         // GET: Producto/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
             if (id == null || _context.Producto == null)
             {
                 return NotFound();

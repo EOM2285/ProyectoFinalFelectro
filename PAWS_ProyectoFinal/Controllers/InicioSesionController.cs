@@ -14,8 +14,6 @@ namespace PAWS_ProyectoFinal.Controllers
             _context = context;
         }
 
-
-
         public IActionResult Index()
         {
             HttpContext.Session.Remove("nombre");
