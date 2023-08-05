@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PAWS_ProyectoFinal.props" />
+</Project>

@@ -1,0 +1,49 @@
+@model PAWS_ProyectoFinal.Models.Usuario
+
+
+    <div class="container">
+        <div style="margin-top:50px; margin:auto; text-align: center;">
+            <img class="mb-4" src="~/imagenes/productos/LogoFelectro.png" alt="Logo de la compañía" width="200" height="158">
+            <h4 style="text-align: center;">Registro de Usuario</h4>
+        </div>
+        <br />
+        <div class="card  borde-marca col-md-4 col-sm-12" style="margin:auto;">
+            <div class="card-body">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Nombre" class="control-label"></label>
+                        <input asp-for="Nombre" class="form-control" />
+                        <span asp-validation-for="Nombre" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Apellidos" class="control-label"></label>
+                        <input asp-for="Apellidos" class="form-control" />
+                        <span asp-validation-for="Apellidos" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Correo" class="control-label"></label>
+                        <input asp-for="Correo" class="form-control" />
+                        <span asp-validation-for="Correo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Contrasena" class="control-label"></label>
+                        <input asp-for="Contrasena" class="form-control" />
+                        <span asp-validation-for="Contrasena" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Telefono" class="control-label"></label>
+                        <input asp-for="Telefono" class="form-control" />
+                        <span asp-validation-for="Telefono" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <input type="submit" value="Enviar" class="btn fondo-marca" />
+                    </div>
+                </form>
+                <br />
+                <a class="btn-outline-primary" asp-controller="InicioSesion" asp-action="Index">Volver</a>
+            </div>
+
+        </div>
+    </div>

@@ -1,0 +1,39 @@
+@model IEnumerable<PAWS_ProyectoFinal.Models.Producto>
+
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+@foreach (var item in Model)
+{
+    <div class="card border border-info col-md-4 col-sm-12">
+        <div class="card-body">
+            <div>
+                <img src="data:image/jpg; base64, @item.ImagenProducto" class="rounded" width="200">
+            </div>
+            <div>
+                @Html.DisplayFor(modelItem => item.NombreProducto)
+            </div>
+            <div>
+                @Html.DisplayFor(modelItem => item.DescripcionProducto)
+            </div>
+            <div>
+                @Html.DisplayFor(modelItem => item.PrecioProducto)
+            </div>
+            <div>
+                @Html.DisplayFor(modelItem => item.EstadoProducto)
+            </div>
+            <div>
+                @Html.DisplayFor(modelItem => item.Categoria.NombreCategoria)
+            </div>
+            <hr />
+            <div>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </div>
+        </div>
+    </div>
+
+}
