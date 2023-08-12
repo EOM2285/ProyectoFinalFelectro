@@ -1,315 +1,315 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PAWS_ProyectoFinal.bundle.scp.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PAWS_ProyectoFinal.bundle.scp.css",
       "PackagePath": "staticwebassets\\PAWS_ProyectoFinal.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\css\\createIndex.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\css\\createIndex.css",
       "PackagePath": "staticwebassets\\css\\createIndex.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\css\\main2.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\css\\main2.css",
       "PackagePath": "staticwebassets\\css\\main2.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\css\\misEstilos.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\css\\misEstilos.css",
       "PackagePath": "staticwebassets\\css\\misEstilos.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\css\\site.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\css\\style.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\favicon.ico",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\logos\\Cards Add.png",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\logos\\Cards Add.png",
       "PackagePath": "staticwebassets\\imagenes\\logos\\Cards Add.png"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\logos\\LogoFelectro.png",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\logos\\LogoFelectro.png",
       "PackagePath": "staticwebassets\\imagenes\\logos\\LogoFelectro.png"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\logos\\Menu_01.png",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\logos\\Menu_01.png",
       "PackagePath": "staticwebassets\\imagenes\\logos\\Menu_01.png"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\productos\\caja_herramientas.png",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\productos\\caja_herramientas.png",
       "PackagePath": "staticwebassets\\imagenes\\productos\\caja_herramientas.png"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\productos\\farol_pared.png",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\productos\\farol_pared.png",
       "PackagePath": "staticwebassets\\imagenes\\productos\\farol_pared.png"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\productos\\juego_desatornillador.png",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\productos\\juego_desatornillador.png",
       "PackagePath": "staticwebassets\\imagenes\\productos\\juego_desatornillador.png"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\productos\\luces_led.png",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\productos\\luces_led.png",
       "PackagePath": "staticwebassets\\imagenes\\productos\\luces_led.png"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\productos\\taladro.png",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\imagenes\\productos\\taladro.png",
       "PackagePath": "staticwebassets\\imagenes\\productos\\taladro.png"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\js\\createIndex.js",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\js\\createIndex.js",
       "PackagePath": "staticwebassets\\js\\createIndex.js"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\js\\main.js",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\js\\main2.js",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\js\\main2.js",
       "PackagePath": "staticwebassets\\js\\main2.js"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\js\\site.js",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\template\\index-2.html",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\template\\index-2.html",
       "PackagePath": "staticwebassets\\template\\index-2.html"
     },
     {
-      "Id": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\template\\index.html",
+      "Id": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\wwwroot\\template\\index.html",
       "PackagePath": "staticwebassets\\template\\index.html"
     },
     {
