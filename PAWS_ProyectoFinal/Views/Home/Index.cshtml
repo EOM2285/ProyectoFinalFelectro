@@ -3,34 +3,71 @@
 
 
 @{
-	ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home Page";
 }
 
+@functions
+{
+    string formato(string number)
+    {
+        char coma = ',';
+        int control = 0;
+        string salida = "";
+        for (int i = number.Length - 1; i >= 0; i--)
+        {
+            control = control + 1;
+            if (control == 3)
+            {
+                if (number[i] == coma || i == 0)
+                {
+                    salida += number[i];
+                    control = 0;
+                }
+                else
+                {
+                    salida += number[i];
+                    salida += ".";
+                    control = 0;
+                }
+            }
+            else
+            {
+                salida += number[i];
+            }
+        }
 
+        string salidaFinal = "";
+        for (int i = salida.Length - 1; i >= 0; i--)
+        {
+            salidaFinal += salida[i];
+        }
+        return salidaFinal;
+    }
+}
 
 <section id="portfolio" class="portfolio">
 
-	<div class="container" data-aos="fade-up">
+    <div class="container" data-aos="fade-up">
 
-		<div class="section-title">
-			<h2>Sección de Productos</h2>
-			<h3>Los mejores productos en <span>Felectro</span></h3>
-		</div>
+        <div class="section-title">
+            <h2>Sección de Productos</h2>
+            <h3>Los mejores productos en <span>Felectro</span></h3>
+        </div>
 
-		<div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-			@foreach (var item in Model)
-						{
-			<div class="col-lg-4 col-md-6 portfolio-item filter-app">
-					<img src="data:image/jpg; base64, @item.ImagenProducto" class="img-fluid" alt="">
-				<div class="portfolio-info">
-						<h4>@item.NombreProducto</h4>
-						<p>@item.DescripcionProducto</p>
-						<p>₡ @item.PrecioProducto</p>
-					<p><a href="#" class="cart"><span class="material-symbols-outlined">shopping_cart</span></a></p>
-				</div>
-			</div>
-						}
-		</div>
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+                    <img src="data:image/jpg; base64, @item.ImagenProducto" class="img-fluid" alt="" width="170" >
+                    <div class="portfolio-info">
+                        <h4>@item.NombreProducto</h4>
+                        <p>@item.DescripcionProducto</p>
+                        <p>₡ @formato(@item.PrecioProducto.ToString())</p>
+                        <p><a href="#" class="cart"><span class="material-symbols-outlined">shopping_cart</span></a></p>
+                    </div>
+                </div>
+            }
+        </div>
 
-	</div>
+    </div>
 </section>
