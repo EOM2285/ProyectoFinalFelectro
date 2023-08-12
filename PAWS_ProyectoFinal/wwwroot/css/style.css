@@ -33,19 +33,35 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
-/*--------------------------------------------------------------
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+    
+}
+
+.cart {
+    color: #106eea;
+    position: absolute;
+    right: 0;
+
+}
+
+.cart:hover{
+    color: #74B72E;
+}
+
+    /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: #fff;
-}
+    #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        overflow: hidden;
+        background: #fff;
+    }
 
 #preloader:before {
   content: "";
@@ -1135,18 +1151,18 @@ section {
   margin-bottom: 0;
 }
 
-.portfolio .portfolio-item .portfolio-info .preview-link,
-.portfolio .portfolio-item .portfolio-info .details-link {
-  position: absolute;
-  right: 40px;
-  font-size: 24px;
-  top: calc(50% - 18px);
-  color: #3c3c3c;
-}
+    .portfolio .portfolio-item .portfolio-info .preview-link a,
+    .portfolio .portfolio-item .portfolio-info .details-link a {
+        position: absolute;
+        right: 40px;
+        font-size: 30px;
+        top: calc(50% - 18px);
+        color: #74B72E;
+    }
 
-.portfolio .portfolio-item .portfolio-info .preview-link:hover,
-.portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: #106eea;
+.portfolio .portfolio-item .portfolio-info .preview-link a:hover,
+.portfolio .portfolio-item .portfolio-info .details-link a:hover {
+  color: #74B72E;
 }
 
 .portfolio .portfolio-item .portfolio-info .details-link {

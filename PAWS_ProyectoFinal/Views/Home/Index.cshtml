@@ -1,5 +1,9 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<PAWS_ProyectoFinal.Models.Producto>
+
+
+
+@{
+	ViewData["Title"] = "Home Page";
 }
 
 
@@ -14,25 +18,26 @@
 		</div>
 
 		<div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
+			@foreach (var item in Model)
+						{
 			<div class="col-lg-4 col-md-6 portfolio-item filter-app">
-				<img src="imagenes/productos/caja_herramientas.png" class="img-fluid" alt="">
+					<img src="data:image/jpg; base64, @item.ImagenProducto" class="img-fluid" alt="">
 				<div class="portfolio-info">
-					<h4>Caja de Herramientas</h4>
-					<p>Caja de herramientas con 120 unidades</p>
-					<p>₡ 134000.00</p>
-					<a href="imagenes/productos/caja_herramientas.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-
+						<h4>@item.NombreProducto</h4>
+						<p>@item.DescripcionProducto</p>
+						<p>₡ @item.PrecioProducto</p>
+					<p><a href="#" class="cart"><span class="material-symbols-outlined">shopping_cart</span></a></p>
 				</div>
 			</div>
-
-			<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+						}
+			@*<div class="col-lg-4 col-md-6 portfolio-item filter-web">
 				<img src="imagenes/productos/juego_desatornillador.png" class="img-fluid" alt="">
 				<div class="portfolio-info">
 					<h4>Juego de Desatornilladores</h4>
 					<p>Juego de 10 unidades de desatornilladores de todo tipo</p>
 					<p>₡ 15000.00</p>
-					<a href="imagenes/productos/juego_desatornillador.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+					<p><a href="#" class="cart"><span class="material-symbols-outlined">shopping_cart</span></a></p>
+					
 
 				</div>
 			</div>
@@ -66,9 +71,8 @@
 					<a href="imagenes/productos/farol_pared.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
 
 				</div>
-			</div>
+			</div>*@
 		</div>
 
 	</div>
 </section><!-- End Portfolio Section -->
-
