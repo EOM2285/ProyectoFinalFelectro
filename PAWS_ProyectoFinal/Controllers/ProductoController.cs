@@ -58,9 +58,9 @@ namespace PAWS_ProyectoFinal.Controllers
         // GET: Producto/Create
         public IActionResult Create()
         {
-            if ( HttpContext.Session.GetString("nombre") == null) 
+            if (HttpContext.Session.GetString("nombre") == null)
             {
-              return RedirectToAction("Index","InicioSesion");
+                return RedirectToAction("Index", "InicioSesion");
             }
             ViewData["CategoriaId"] = new SelectList(_context.Categoria, "Id", "NombreCategoria");
             return View();
@@ -71,7 +71,7 @@ namespace PAWS_ProyectoFinal.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,CategoriaId,NombreProducto,DescripcionProducto,PrecioProducto,EstadoProducto,File")] Producto producto,IFormFile file)
+        public async Task<IActionResult> Create([Bind("Id,CategoriaId,NombreProducto,DescripcionProducto,PrecioProducto,EstadoProducto,File")] Producto producto, IFormFile file)
         {
             if (HttpContext.Session.GetString("nombre") == null)
             {
@@ -125,7 +125,7 @@ namespace PAWS_ProyectoFinal.Controllers
             {
                 return NotFound();
             }
-            ViewData["CategoriaId"] = new SelectList(_context.Categoria, "Id", "Id", producto.CategoriaId);
+            ViewData["CategoriaId"] = new SelectList(_context.Categoria, "Id", "NombreCategoria");
             return View(producto);
         }
 
@@ -134,7 +134,7 @@ namespace PAWS_ProyectoFinal.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,CategoriaId,NombreProducto,DescripcionProducto,PrecioProducto,EstadoProducto,ImagenProducto")] Producto producto)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CategoriaId,NombreProducto,DescripcionProducto,PrecioProducto,EstadoProducto, File")] Producto producto, IFormFile file)
         {
 
             if (HttpContext.Session.GetString("nombre") == null)
@@ -147,29 +147,48 @@ namespace PAWS_ProyectoFinal.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+
+            try
             {
-                try
+                if (ModelState.IsValid)
                 {
-                    _context.Update(producto);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ProductoExists(producto.Id))
+                    byte[] bytes;
+                    if (producto.File != null)
                     {
-                        return NotFound();
+                        using (Stream fs = producto.File.OpenReadStream())
+                        {
+                            using (BinaryReader br = new(fs))
+                            {
+                                bytes = br.ReadBytes((int)fs.Length);
+                                producto.ImagenProducto = Convert.ToBase64String(bytes, 0, bytes.Length);
+                            }
+                        }
+
+                        _context.Update(producto);
+                        await _context.SaveChangesAsync();
+                        return RedirectToAction(nameof(Index));
                     }
-                    else
-                    {
-                        throw;
-                    }
+                    ViewData["CategoriaId"] = new SelectList(_context.Categoria, "Id", "NombreCategoria", producto.CategoriaId);
+                    return View(producto);
                 }
-                return RedirectToAction(nameof(Index));
+                ViewData["CategoriaId"] = new SelectList(_context.Categoria, "Id", "NombreCategoria", producto.CategoriaId);
+                return View(producto);
             }
-            ViewData["CategoriaId"] = new SelectList(_context.Categoria, "Id", "Id", producto.CategoriaId);
-            return View(producto);
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ProductoExists(producto.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
         }
+
+
 
         // GET: Producto/Delete/5
         public async Task<IActionResult> Delete(int? id)
@@ -210,14 +229,14 @@ namespace PAWS_ProyectoFinal.Controllers
             {
                 _context.Producto.Remove(producto);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ProductoExists(int id)
         {
-          return (_context.Producto?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Producto?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
