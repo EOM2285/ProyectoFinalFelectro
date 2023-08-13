@@ -1,11 +1,8 @@
 ﻿@model IEnumerable<PAWS_ProyectoFinal.Models.Producto>
 
-
-
 @{
 	ViewData["Title"] = "Home Page";
 }
-
 
 
 <section id="portfolio" class="portfolio">
@@ -19,18 +16,17 @@
 
 		<div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 			@foreach (var item in Model)
-						{
-			<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+			{
+				<div class="col-lg-4 col-md-6 portfolio-item filter-app">
 					<img src="data:image/jpg; base64, @item.ImagenProducto" class="img-fluid" alt="">
-				<div class="portfolio-info">
+					<div class="portfolio-info">
 						<h4>@item.NombreProducto</h4>
 						<p>@item.DescripcionProducto</p>
 						<p>₡ @item.PrecioProducto</p>
-					<p><a href="#" class="cart"><span class="material-symbols-outlined">shopping_cart</span></a></p>
+						<p><a href="#" class="cart"><span class="material-symbols-outlined">shopping_cart</span></a></p>
+					</div>
 				</div>
-			</div>
-						}
+			}
 		</div>
-
 	</div>
 </section>
