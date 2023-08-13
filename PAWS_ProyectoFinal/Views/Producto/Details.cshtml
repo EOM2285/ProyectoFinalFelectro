@@ -1,49 +1,102 @@
 @model PAWS_ProyectoFinal.Models.Producto
 
-<div>
+
+@functions
+{
+    string formato(string number)
+    {
+        char coma = ',';
+        int control = 0;
+        string salida = "";
+        for (int i = number.Length - 1; i >= 0; i--)
+        {
+            control = control + 1;
+            if (control == 3)
+            {
+                if (number[i] == coma || i == 0)
+                {
+                    salida += number[i];
+                    control = 0;
+                }
+                else
+                {
+                    salida += number[i];
+                    salida += ".";
+                    control = 0;
+                }
+            }
+            else
+            {
+                salida += number[i];
+            }
+        }
+
+        string salidaFinal = "";
+        for (int i = salida.Length - 1; i >= 0; i--)
+        {
+            salidaFinal += salida[i];
+        }
+        return salidaFinal;
+    }
+}
+
+
+<div class="container">
     <h4>Producto</h4>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NombreProducto)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NombreProducto)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DescripcionProducto)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DescripcionProducto)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PrecioProducto)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PrecioProducto)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.EstadoProducto)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.EstadoProducto)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ImagenProducto)
-        </dt>
-        <dd class = "col-sm-10">
-            <img src="data:image/jpg; base64, @Model.ImagenProducto" class="rounded" width="170">
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Categoria)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Categoria.NombreCategoria)
-        </dd>
-    </dl>
+    <div class=" borde-marca card col-sm-12 shadow-lg p-3 mb-5 bg-white rounded">
+
+        <div class="card-body ">
+            <div class="row">
+                <div class="col-6">
+                    <label >
+                        @Html.DisplayNameFor(model => model.NombreProducto):
+                    </label>
+                    <div class="form-control" >
+                        @Html.DisplayFor(model => model.NombreProducto)
+                    </div>
+                    <label>
+                        @Html.DisplayNameFor(model => model.DescripcionProducto)
+                    </label>
+                    <div class="form-control">
+                        @Html.DisplayFor(model => model.DescripcionProducto)
+                    </div>
+                    <label>
+                        @Html.DisplayNameFor(model => model.PrecioProducto)
+                    </label>
+                    <div class="form-control">
+                        ¢@formato(Model.PrecioProducto.ToString())
+                    </div>
+                    <label >
+                        @Html.DisplayNameFor(model => model.EstadoProducto)
+                    </label>
+                    <div >
+                        @Html.DisplayFor(model => model.EstadoProducto)
+                    </div>                    
+                    <div>
+                        @Html.DisplayNameFor(model => model.Categoria)
+                    </div>
+                    <div class ="form-control">
+                        @Html.DisplayFor(model => model.Categoria.NombreCategoria)
+                    </div>
+                   
+                </div>
+                <div class="col-6" style="text-align:center; align-self:center">
+                    <div >
+                        <img src="data:image/jpg; base64, @Model.ImagenProducto" class="rounded" width="300">
+                    </div>
+                </div>
+            </div>           
+        </div>   
+
+    </div>
+
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+
 

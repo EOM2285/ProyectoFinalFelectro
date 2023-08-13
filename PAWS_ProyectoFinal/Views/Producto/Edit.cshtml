@@ -1,54 +1,56 @@
 @model PAWS_ProyectoFinal.Models.Producto
 
-	<h4>Producto</h4>
-	<hr />
-	<div class="row">
-		<div class="col-md-4">
-		<form asp-action="Edit" enctype="multipart/form-data" method="post">
-				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-				<input type="hidden" asp-for="Id" />
-				<div class="form-group">
-					<label asp-for="CategoriaId" class="control-label"></label>
-					<select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId"></select>
-					<span asp-validation-for="CategoriaId" class="text-danger"></span>
-				</div>
-				<div class="form-group">
-					<label asp-for="NombreProducto" class="control-label"></label>
-					<input asp-for="NombreProducto" class="form-control" />
-					<span asp-validation-for="NombreProducto" class="text-danger"></span>
-				</div>
-				<div class="form-group">
-					<label asp-for="DescripcionProducto" class="control-label"></label>
-					<input asp-for="DescripcionProducto" class="form-control" />
-					<span asp-validation-for="DescripcionProducto" class="text-danger"></span>
-				</div>
-				<div class="form-group">
-					<label asp-for="PrecioProducto" class="control-label"></label>
-					<input asp-for="PrecioProducto" class="form-control" />
-					<span asp-validation-for="PrecioProducto" class="text-danger"></span>
-				</div>
-				<div class="form-group form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" asp-for="EstadoProducto" /> @Html.DisplayNameFor(model => model.EstadoProducto)
-					</label>
-				</div>
-				<div class="form-group">
-					<label asp-for="File" class="control-label"></label>
-					<input type="file" asp-for="File" class="form-control" />
-					<span asp-validation-for="File" class="text-danger"></span>
-				</div>
-				<div class="form-group">
-					<img src="data:image/jpg; base64, @Model.ImagenProducto" class="rounded" width="170">
-				</div>
+<h4>Producto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" enctype="multipart/form-data" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="CategoriaId" class="control-label"></label>
+                <select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId"></select>
+                <span asp-validation-for="CategoriaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NombreProducto" class="control-label"></label>
+                <input asp-for="NombreProducto" class="form-control" />
+                <span asp-validation-for="NombreProducto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescripcionProducto" class="control-label"></label>
+                <input asp-for="DescripcionProducto" class="form-control" />
+                <span asp-validation-for="DescripcionProducto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecioProducto" class="control-label"></label>
+                <input asp-for="PrecioProducto" class="form-control" />
+                <span asp-validation-for="PrecioProducto" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="EstadoProducto" /> @Html.DisplayNameFor(model => model.EstadoProducto)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="File" class="control-label"></label>
+                <input type="file" asp-for="File" class="form-control" />
+                <span asp-validation-for="File" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="ImagenProducto" />
+                        
+            <div class="form-group">
+                <img src="data:image/jpg; base64, @Model.ImagenProducto" class="rounded" width="170">
+            </div>
 
-				<div class="form-group">
-					<input type="submit" value="Save" class="btn btn-primary" />
-				</div>
-			</form>
-		</div>
-	</div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
 
-	<div>
-		<a asp-action="Index">Back to List</a>
-	</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
 
