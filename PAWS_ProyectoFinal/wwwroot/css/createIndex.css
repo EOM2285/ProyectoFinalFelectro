@@ -132,6 +132,14 @@ table.table td a.delete {
     color: #F44336;
 }
 
+ td a.agregar, disminuir {
+    color: blue;
+}
+
+td a.eliminar {
+    color: red;
+}
+
 table.table td a.details {
     color: #54BEBB;
 }

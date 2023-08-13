@@ -23,7 +23,7 @@
 						<h4>@item.NombreProducto</h4>
 						<p>@item.DescripcionProducto</p>
 						<p>₡ @item.PrecioProducto</p>
-						<p><a href="#" class="cart"><span class="material-symbols-outlined">shopping_cart</span></a></p>
+						<p><a class="cart" asp-controller="Carrito" asp-action="Agregar" asp-route-id="@item.Id"><span class="material-symbols-outlined">shopping_cart</span></a></p>
 					</div>
 				</div>
 			}

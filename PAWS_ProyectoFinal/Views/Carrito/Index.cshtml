@@ -1,0 +1,48 @@
+﻿@model PAWS_ProyectoFinal.Models.ViewModels.CarritoCompras
+
+@{
+	ViewData["Title"] = "Carrito de Compras";
+}
+
+@if (Model.ItemCarrito.Count > 0)
+{
+	<table class="table">
+		<tr>
+			<th>Producto</th>
+			<th>Cantidad</th>
+			<th></th>
+			<th>Precio</th>
+			<th>Total</th>
+		</tr>
+
+		@foreach (var item in Model.ItemCarrito)
+		{
+			<tr>
+				<td>@item.NomProducto</td>
+				<td>@item.Cantidad</td>
+				<td>
+					<a class="agregar" asp-action="Agregar" asp-route-id="@item.ProductoId"><span class="material-symbols-outlined">add</span></a>
+					<a class="disminuir" asp-action="Disminuir" asp-route-id="@item.ProductoId"><span class="material-symbols-outlined">remove</span></a>
+					<a class="eliminar" asp-action="Remover" asp-route-id="@item.ProductoId"><span class="material-symbols-outlined">delete</span></a>
+				</td>
+				<td>@item.Precio.ToString("C2")</td>
+				<td>@Model.ItemCarrito.Where(x => x.ProductoId == item.ProductoId).Sum(x => x.Cantidad * x.Precio).ToString("C2")</td>
+			</tr>
+		}
+		<tr>
+			<td class="text-right" colspan="4">Total a pagar: @Model.TotalFinal.ToString("C2")</td>
+		</tr>
+		<tr>
+			<td class="text-right" colspan="4">
+				<a class="btn btn-danger" asp-action="Clear">Limpiar Carrito</a>
+				<a class="btn btn-success" href="#">Comprar</a>
+			</td>
+		</tr>
+	</table>
+
+}
+else
+{
+	<h3 class="display-4-text-center">El carrito está vacío</h3>
+}
+

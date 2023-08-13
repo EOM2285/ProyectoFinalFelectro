@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj": {}
+    "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj": {}
   },
   "projects": {
-    "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj": {
+    "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj",
+        "projectUniqueName": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj",
         "projectName": "PAWS_ProyectoFinal",
-        "projectPath": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj",
-        "packagesPath": "C:\\Users\\eddyo\\.nuget\\packages\\",
-        "outputPath": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\obj\\",
+        "projectPath": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj",
+        "packagesPath": "C:\\Users\\Fabian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\eddyo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Fabian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -85,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

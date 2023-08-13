@@ -9,101 +9,105 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PAWS_ProyectoFinal
 build_property.RootNamespace = PAWS_ProyectoFinal
-build_property.ProjectDir = C:\Repositorio\GitHub\PAWS_ProyectoFinal\PAWS_ProyectoFinal\
+build_property.ProjectDir = C:\Users\Fabian\Desktop\II Cuatrimestre\Programacion Avanzada Web\Proyecto Final\ProyectoFinalFelectro\PAWS_ProyectoFinal\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Repositorio\GitHub\PAWS_ProyectoFinal\PAWS_ProyectoFinal
+build_property.MSBuildProjectDirectory = C:\Users\Fabian\Desktop\II Cuatrimestre\Programacion Avanzada Web\Proyecto Final\ProyectoFinalFelectro\PAWS_ProyectoFinal
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Categoria/Create.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Carrito/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycml0b1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Categoria/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Categoria/Delete.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Categoria/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Categoria/Details.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Categoria/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Categoria/Edit.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Categoria/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Categoria/Index.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Categoria/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Home/Index.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Home/Privacy.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/InicioSesion/Index.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/InicioSesion/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lvU2VzaW9uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Producto/Create.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Producto/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Producto/Delete.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Producto/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Producto/Details.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Producto/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Producto/Edit.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Producto/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Producto/Index.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Producto/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Shared/Error.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Usuario/Create.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Usuario/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Usuario/Delete.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Usuario/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Usuario/Details.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Usuario/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Usuario/Edit.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Usuario/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Usuario/Index.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Usuario/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/_ViewImports.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/_ViewStart.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositorio/GitHub/PAWS_ProyectoFinal/PAWS_ProyectoFinal/Views/Shared/_Layout.cshtml]
+[C:/Users/Fabian/Desktop/II Cuatrimestre/Programacion Avanzada Web/Proyecto Final/ProyectoFinalFelectro/PAWS_ProyectoFinal/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9bfqnkulbj
