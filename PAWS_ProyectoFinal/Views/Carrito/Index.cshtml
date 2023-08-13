@@ -4,13 +4,54 @@
 	ViewData["Title"] = "Carrito de Compras";
 }
 
+@functions
+{
+	string formato(string number)
+	{
+		char coma = ',';
+		int control = 0;
+		string salida = "";
+		for (int i = number.Length - 1; i >= 0; i--)
+		{
+			control = control + 1;
+			if (control == 3)
+			{
+				if (number[i] == coma || i == 0)
+				{
+					salida += number[i];
+					control = 0;
+				}
+				else
+				{
+					salida += number[i];
+					salida += ".";
+					control = 0;
+				}
+			}
+			else
+			{
+				salida += number[i];
+			}
+		}
+
+		string salidaFinal = "";
+		for (int i = salida.Length - 1; i >= 0; i--)
+		{
+			salidaFinal += salida[i];
+		}
+		return salidaFinal;
+	}
+}
+
+
 @if (Model.ItemCarrito.Count > 0)
 {
 	<table class="table">
 		<tr>
+			<th>Imagen</th>
 			<th>Producto</th>
 			<th>Cantidad</th>
-			<th></th>
+			<th>Agregar/Eliminar</th>
 			<th>Precio</th>
 			<th>Total</th>
 		</tr>
@@ -18,6 +59,7 @@
 		@foreach (var item in Model.ItemCarrito)
 		{
 			<tr>
+				<td><img src="data:image/jpg; base64, @item.Imagen" class="img-fluid" alt="" width="100"></td>				
 				<td>@item.NomProducto</td>
 				<td>@item.Cantidad</td>
 				<td>
@@ -25,17 +67,17 @@
 					<a class="disminuir" asp-action="Disminuir" asp-route-id="@item.ProductoId"><span class="material-symbols-outlined">remove</span></a>
 					<a class="eliminar" asp-action="Remover" asp-route-id="@item.ProductoId"><span class="material-symbols-outlined">delete</span></a>
 				</td>
-				<td>@item.Precio.ToString("C2")</td>
-				<td>@Model.ItemCarrito.Where(x => x.ProductoId == item.ProductoId).Sum(x => x.Cantidad * x.Precio).ToString("C2")</td>
+				<td>¢@formato(@item.Precio.ToString())</td>
+				<td>¢@formato(@Model.ItemCarrito.Where(x => x.ProductoId == item.ProductoId).Sum(x => x.Cantidad * x.Precio).ToString())</td>
 			</tr>
 		}
 		<tr>
-			<td class="text-right" colspan="4">Total a pagar: @Model.TotalFinal.ToString("C2")</td>
+			<td class="text-right" colspan="4">Total a pagar: ¢@formato(@Model.TotalFinal.ToString())</td>
 		</tr>
 		<tr>
 			<td class="text-right" colspan="4">
 				<a class="btn btn-danger" asp-action="Eliminar">Limpiar Carrito</a>
-				<a class="btn btn-success" href="#">Comprar</a>
+				<a class="btn btn-success" asp-action="Facturar">Comprar</a>
 			</td>
 		</tr>
 	</table>

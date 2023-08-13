@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Components.Forms;
+using Microsoft.AspNetCore.Mvc;
 using PAWS_ProyectoFinal.Infrastructure.TagHelpers;
 using PAWS_ProyectoFinal.Models;
 using PAWS_ProyectoFinal.Models.ViewModels;
@@ -98,6 +99,49 @@ namespace PAWS_ProyectoFinal.Controllers
 		}
 		public IActionResult Eliminar()
 		{
+			HttpContext.Session.Remove("Carrito");
+
+			return RedirectToAction("Index");
+		}
+
+
+		public async Task<IActionResult> Facturar() 
+		{
+			List<ItemCarrito> carrito = HttpContext.Session.GetJson<List<ItemCarrito>>("Carrito") ?? new List<ItemCarrito>();
+
+			CarritoCompras carritoC = new()
+			{
+				ItemCarrito = carrito,
+				TotalFinal = carrito.Sum(x => x.Cantidad * x.Precio)
+			};
+			Venta factura = new()
+			{ 
+				ClienteId = 1,
+				NombreCliente = HttpContext.Session.GetString("nombre")+" "+ HttpContext.Session.GetString("apellido"),
+				CorreoCliente = HttpContext.Session.GetString("correo"),
+				TipoPago ="Tarjeta",
+				MontoPago = carritoC.TotalFinal,
+				FechaRegistro = DateTime.Now
+			};
+
+			_context.Venta.Add(factura);
+			await _context.SaveChangesAsync();
+			var idFact = factura.Id;
+
+			foreach (var item in carrito) 
+			{
+				DetalleVenta linea = new() { 
+					VentaId = idFact,
+					ProductoNombre = item.NomProducto,
+					ProductoId = item.ProductoId,
+					PrecioVenta = item.Precio,
+					Cantidad = item.Cantidad,
+					Total = item.Total
+				};
+
+				_context.DetalleVenta.Add(linea);
+				await _context.SaveChangesAsync();
+			}
 			HttpContext.Session.Remove("Carrito");
 
 			return RedirectToAction("Index");

@@ -4,6 +4,46 @@
 	ViewData["Title"] = "Home Page";
 }
 
+@functions
+{
+    string formato(string number)
+    {
+        char coma = ',';
+        int control = 0;
+        string salida = "";
+        for (int i = number.Length - 1; i >= 0; i--)
+        {
+            control = control + 1;
+            if (control == 3)
+            {
+                if (number[i] == coma || i == 0)
+                {
+                    salida += number[i];
+                    control = 0;
+                }
+                else
+                {
+                    salida += number[i];
+                    salida += ".";
+                    control = 0;
+                }
+            }
+            else
+            {
+                salida += number[i];
+            }
+        }
+
+        string salidaFinal = "";
+        for (int i = salida.Length - 1; i >= 0; i--)
+        {
+            salidaFinal += salida[i];
+        }
+        return salidaFinal;
+    }
+}
+
+
 
 <section id="portfolio" class="portfolio">
 
@@ -18,11 +58,11 @@
 			@foreach (var item in Model)
 			{
 				<div class="col-lg-4 col-md-6 portfolio-item filter-app">
-					<img src="data:image/jpg; base64, @item.ImagenProducto" class="img-fluid" alt="">
+                    <img src="data:image/jpg; base64, @item.ImagenProducto" class="img-fluid" alt="" width="300">
 					<div class="portfolio-info">
 						<h4>@item.NombreProducto</h4>
 						<p>@item.DescripcionProducto</p>
-						<p>₡ @item.PrecioProducto</p>
+						<p>₡ @formato(@item.PrecioProducto.ToString())</p>
 						<p><a class="cart" asp-controller="Carrito" asp-action="Agregar" asp-route-id="@item.Id"><span class="material-symbols-outlined">shopping_cart</span></a></p>
 					</div>
 				</div>
