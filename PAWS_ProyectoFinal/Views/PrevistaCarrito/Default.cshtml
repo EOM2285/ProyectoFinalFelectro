@@ -1,0 +1,13 @@
+﻿@model PrevistaCarrito
+
+@if(Model != null)
+{
+    <p>Items in cart: <span class="badge badge-primary">@Model.NumeroItems</span></p>
+    <p>Total: <b>@Model.TotalNeto.ToString("C2")</b></p>
+    <a class="btn btn-primary" asp-controller="Carrito" asp-action="Index">View Cart</a>
+    <a class="btn btn-danger" asp-controller="Carrito" asp-action="Eliminar">Clear Cart</a>
+}
+else
+{
+    <p class="lead m-0">Su carrito está vacío</p>
+}

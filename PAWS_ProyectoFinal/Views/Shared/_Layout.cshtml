@@ -5,9 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>@ViewData["Title"] FELECTRO</title>
 	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />	
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 	<link href="~/css/main2.css" rel="stylesheet" />
-	<link href="~/css/misEstilos.css" rel="stylesheet"/>
+	<link href="~/css/misEstilos.css" rel="stylesheet" />
 	<link href="~/css/style.css" rel="stylesheet" />
 
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
@@ -19,60 +19,58 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+
 	<link href="~/css/createindex.css" rel="stylesheet" />
-		
+
 </head>
 <body style="background-color: white">
 	<header id="header" class="d-flex align-items-center">
 		<div class="container d-flex align-items-center justify-content-between" style="align-items:center; justify-content:space-between">
-			<h1 class="logo"><a href="index.html">Felectro<span>.</span></a></h1>					
-			<!-- Uncomment below if you prefer to use an image logo -->
-			<!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+			<h1 class="logo"><a href="index.html">Felectro<span>.</span></a></h1>
 
 			<nav id="navbar" class="navbar">
 				<ul>
 					<li><a class="nav-link scrollto" asp-area=" " asp-controller="Home" asp-action="Index">Página Principal</a></li>
-					<li><a class="nav-link scrollto" asp-area=" " asp-controller="Home" asp-action="Privacy" >Privacy</a></li>
+					<li><a class="nav-link scrollto" asp-area=" " asp-controller="Home" asp-action="Privacy">Privacy</a></li>
 					<li><a class="nav-link scrollto" asp-area="" asp-controller="Categoria" asp-action="Index">Categorias</a></li>
-					<li><a class="nav-link scrollto" asp-area="" asp-controller="Producto" asp-action="Index" >Productos</a></li>
+					<li><a class="nav-link scrollto" asp-area="" asp-controller="Producto" asp-action="Index">Productos</a></li>
 					<li><a class="nav-link scrollto" asp-area="" asp-controller="Carrito" asp-action="Index"><span class="material-symbols-outlined">shopping_cart</span></a></li>
-					
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<h6 class="form-control fondo-marca  ">@Context.Session.GetString("nombre") @Context.Session.GetString("apellido")</h6>
+
+					<li class="nav-item dropdown" style="justify-content:center">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="justify-content:center">
+							<h6 class="form-control fondo-marca">@Context.Session.GetString("nombre") @Context.Session.GetString("apellido")</h6>
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 							<li><a class="dropdown-item" href="#">Action</a></li>
 							<li><a class="dropdown-item" href="#">Another action</a></li>
 							<li><a asp-controller="InicioSesion" asp-action="Index">Cerrar Sesion</a></li>
-						</ul>						 
+						</ul>
 					</li>
-				</ul>				
-											
-				
+				</ul>
+
+
 			</nav>
 			<i class="bi bi-list mobile-nav-toggle align-items-center ">
 				<img src="~/imagenes/logos/menu_01.png" width="30" height="30" />
-			</i><!-- .navbar -->
+			</i>
 		</div>
-	</header><!-- End Header -->
-	
-		<section >
-			@RenderBody()
-		</section>
-		
-	
+	</header>
+
+	<div>
+		@RenderBody()
+	</div>
+
+
 	<footer class="border-top footer text-muted">
 		<div class="container">
 			&copy; 2023 - PAWS_ProyectoFinal - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
 		</div>
 	</footer>
 
-	<script src="~/js/main2.js"></script>	
+	<script src="~/js/main2.js"></script>
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="~/js/site.js" ></script>	
+	<script src="~/js/site.js"></script>
 
 	<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
 
@@ -82,7 +80,7 @@
 	<script src="~/js/createindex.js"></script>
 
 	@await RenderSectionAsync("Scripts", required: false)
-	
+
 </body>
 </html>
 

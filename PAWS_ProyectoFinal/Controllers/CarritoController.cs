@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
+using PAWS_ProyectoFinal.Infrastructure.TagHelpers;
 using PAWS_ProyectoFinal.Models;
 using PAWS_ProyectoFinal.Models.ViewModels;
 
@@ -15,22 +15,21 @@ namespace PAWS_ProyectoFinal.Controllers
 		}
 		public IActionResult Index()
 		{
-			List<ItemCarrito> carrito = new List<ItemCarrito>();
+			List<ItemCarrito> carrito = HttpContext.Session.GetJson<List<ItemCarrito>>("Carrito") ?? new List<ItemCarrito>();
 
-			CarritoCompras compras = new()
+			CarritoCompras carritoC = new()
 			{
 				ItemCarrito = carrito,
 				TotalFinal = carrito.Sum(x => x.Cantidad * x.Precio)
 			};
 
-			return View(compras);
+			return View(carritoC);
 		}
 		public async Task<IActionResult> Agregar(int Id)
 		{
 			Producto producto = await _context.Producto.FindAsync(Id);
 
-			List<ItemCarrito> carrito = new List<ItemCarrito>();
-			//List<CartItem> cart = HttpContext.Session.GetJson<List<CartItem>>("Cart") ?? new List<CartItem>();
+			List<ItemCarrito> carrito = HttpContext.Session.GetJson<List<ItemCarrito>>("Carrito") ?? new List<ItemCarrito>();
 
 			ItemCarrito itemCarrito = carrito.Where(c => c.ProductoId == Id).FirstOrDefault();
 
@@ -43,7 +42,7 @@ namespace PAWS_ProyectoFinal.Controllers
 				itemCarrito.Cantidad += 1;
 			}
 
-			//HttpContext.Session.SetJson("Cart", cart);
+			HttpContext.Session.SetJson("Carrito", carrito);
 
 			TempData["Success"] = "El producto fue añadido!";
 
@@ -52,9 +51,8 @@ namespace PAWS_ProyectoFinal.Controllers
 		}
 		public async Task<IActionResult> Disminuir(int Id)
 		{
-			//List<CartItem> cart = HttpContext.Session.GetJson<List<CartItem>>("Cart");
-			List<ItemCarrito> carrito = new List<ItemCarrito>();
-
+			List<ItemCarrito> carrito = HttpContext.Session.GetJson<List<ItemCarrito>>("Carrito");
+			
 			ItemCarrito itemCarrito = carrito.Where(c => c.ProductoId == Id).FirstOrDefault();
 
 			if (itemCarrito.Cantidad > 1)
@@ -72,7 +70,7 @@ namespace PAWS_ProyectoFinal.Controllers
 			}
 			else
 			{
-				//HttpContext.Session.SetJson("Carrito", carrito);
+				HttpContext.Session.SetJson("Carrito", carrito);
 			}
 
 			TempData["Success"] = "El producto fue eliminado!";
@@ -81,9 +79,8 @@ namespace PAWS_ProyectoFinal.Controllers
 		}
 		public async Task<IActionResult> Remover(int Id)
 		{
-			//List<CartItem> cart = HttpContext.Session.GetJson<List<CartItem>>("Cart");
-			List<ItemCarrito> carrito = new List<ItemCarrito>();
-
+			List<ItemCarrito> carrito = HttpContext.Session.GetJson<List<ItemCarrito>>("Carrito");
+			
 			carrito.RemoveAll(p => p.ProductoId == Id);
 
 			if (carrito.Count == 0)
@@ -92,10 +89,16 @@ namespace PAWS_ProyectoFinal.Controllers
 			}
 			else
 			{
-				//HttpContext.Session.SetJson("Carrito", carrito);
+				HttpContext.Session.SetJson("Carrito", carrito);
 			}
 
 			TempData["Success"] = "El producto fue eliminado!";
+
+			return RedirectToAction("Index");
+		}
+		public IActionResult Eliminar()
+		{
+			HttpContext.Session.Remove("Carrito");
 
 			return RedirectToAction("Index");
 		}
