@@ -10855,19 +10855,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\eddyo\\.nuget\\packages\\": {}
+    "C:\\Users\\keytl\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj",
+      "projectUniqueName": "C:\\Users\\keytl\\Downloads\\otromas\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj",
       "projectName": "PAWS_ProyectoFinal",
-      "projectPath": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj",
-      "packagesPath": "C:\\Users\\eddyo\\.nuget\\packages\\",
-      "outputPath": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\obj\\",
+      "projectPath": "C:\\Users\\keytl\\Downloads\\otromas\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj",
+      "packagesPath": "C:\\Users\\keytl\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\keytl\\Downloads\\otromas\\PAWS_ProyectoFinal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\eddyo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\keytl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10875,7 +10875,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -10938,7 +10937,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
