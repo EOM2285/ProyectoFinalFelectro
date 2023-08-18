@@ -56,11 +56,10 @@
 
 		<div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 			@foreach (var item in Model)
-			
-            <img src="data:image/jpg; base64, @item.ImagenProducto" class="img-fluid" alt="">
+			{
 				<div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    
-					<div class="portfolio-info">
+                    <img src="data:image/jpg; base64, @item.ImagenProducto" class="img-fluid" alt="">
+                    <div class="portfolio-info">
 						<h4>@item.NombreProducto</h4>
 						<p>@item.DescripcionProducto</p>
 						<p>₡ @formato(@item.PrecioProducto.ToString())</p>

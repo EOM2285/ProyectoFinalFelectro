@@ -38,6 +38,23 @@ namespace PAWS_ProyectoFinal.Controllers
 
                 //HttpContext.Session.Remove("correo");
 
+
+                /*  NO BORRAR
+                // Verifica el rol del usuario
+                if (login.Id_rol == 1) // Rol 1 - Admin
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                else if (login.Id_rol == 2) // Rol 2 - Usuario normal
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+               */
+
+
+
+
                 return RedirectToAction("Index", "Home");
             }
 

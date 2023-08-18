@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj": {}
+    "C:\\Users\\keytl\\Downloads\\PAWSab\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj": {
+    "C:\\Users\\keytl\\Downloads\\PAWSab\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj",
+        "projectUniqueName": "C:\\Users\\keytl\\Downloads\\PAWSab\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj",
         "projectName": "PAWS_ProyectoFinal",
-        "projectPath": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj",
-        "packagesPath": "C:\\Users\\Fabian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\obj\\",
+        "projectPath": "C:\\Users\\keytl\\Downloads\\PAWSab\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj",
+        "packagesPath": "C:\\Users\\keytl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\keytl\\Downloads\\PAWSab\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Fabian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\keytl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -84,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

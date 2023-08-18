@@ -55,10 +55,11 @@ namespace PAWS_ProyectoFinal.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Apellidos,Correo,Contrasena,Telefono,UltimaConexion,EstadoUsuario")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("Id,Nombre,Apellidos,Correo,Contrasena,Telefono,UltimaConexion,EstadoUsuario, Id_rol")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
+                usuario.Id_rol = 2;
                 usuario.EstadoUsuario = true;
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
@@ -88,7 +89,7 @@ namespace PAWS_ProyectoFinal.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Apellidos,Correo,Contrasena,Telefono,UltimaConexion,EstadoUsuario")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Apellidos,Correo,Contrasena,Telefono,UltimaConexion,EstadoUsuario, Id_rol")] Usuario usuario)
         {
             if (id != usuario.Id)
             {

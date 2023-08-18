@@ -95,7 +95,7 @@ namespace PAWS_ProyectoFinal.Controllers
                     }
                     _context.Add(producto);
                     await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
+                    return RedirectToAction("Index", "InicioSesion");
 
                 }
                 //-------------------------------------------------------------
