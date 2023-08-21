@@ -12,8 +12,8 @@ using PAWS_ProyectoFinal.Models;
 namespace PAWS_ProyectoFinal.Migrations
 {
     [DbContext(typeof(PAWSContext))]
-    [Migration("20230818044603_MigracionRoles")]
-    partial class MigracionRoles
+    [Migration("20230820220440_StatusPedido")]
+    partial class StatusPedido
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -152,6 +152,24 @@ namespace PAWS_ProyectoFinal.Migrations
                     b.ToTable("Reporte");
                 });
 
+            modelBuilder.Entity("PAWS_ProyectoFinal.Models.Roll", b =>
+                {
+                    b.Property<int>("IdRoll")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdRoll"), 1L, 1);
+
+                    b.Property<string>("NombreRoll")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.HasKey("IdRoll");
+
+                    b.ToTable("Rolls");
+                });
+
             modelBuilder.Entity("PAWS_ProyectoFinal.Models.Usuario", b =>
                 {
                     b.Property<int>("Id")
@@ -178,13 +196,13 @@ namespace PAWS_ProyectoFinal.Migrations
                     b.Property<bool>("EstadoUsuario")
                         .HasColumnType("bit");
 
-                    b.Property<int>("Id_rol")
-                        .HasColumnType("int");
-
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
+
+                    b.Property<int>("RollId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Telefono")
                         .IsRequired()
@@ -194,6 +212,8 @@ namespace PAWS_ProyectoFinal.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("RollId");
 
                     b.ToTable("Usuario");
                 });
@@ -224,6 +244,10 @@ namespace PAWS_ProyectoFinal.Migrations
                         .IsRequired()
                         .HasMaxLength(70)
                         .HasColumnType("nvarchar(70)");
+
+                    b.Property<string>("StatusPedido")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TipoPago")
                         .IsRequired()
@@ -256,9 +280,25 @@ namespace PAWS_ProyectoFinal.Migrations
                     b.Navigation("Categoria");
                 });
 
+            modelBuilder.Entity("PAWS_ProyectoFinal.Models.Usuario", b =>
+                {
+                    b.HasOne("PAWS_ProyectoFinal.Models.Roll", "Roll")
+                        .WithMany("Usuarios")
+                        .HasForeignKey("RollId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Roll");
+                });
+
             modelBuilder.Entity("PAWS_ProyectoFinal.Models.Categoria", b =>
                 {
                     b.Navigation("Productos");
+                });
+
+            modelBuilder.Entity("PAWS_ProyectoFinal.Models.Roll", b =>
+                {
+                    b.Navigation("Usuarios");
                 });
 
             modelBuilder.Entity("PAWS_ProyectoFinal.Models.Venta", b =>

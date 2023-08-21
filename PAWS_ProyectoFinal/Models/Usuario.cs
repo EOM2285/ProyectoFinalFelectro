@@ -15,7 +15,8 @@ namespace PAWS_ProyectoFinal.Models
         public string Telefono { get; set; }
         public DateTime? UltimaConexion { get; set; }
         public bool EstadoUsuario { get; set; }
-        public int Id_rol { get; set; }
+        public int RollId { get; set; }
+        public Roll? Roll { get; set; }
 
     }
 }

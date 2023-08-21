@@ -28,6 +28,10 @@ namespace PAWS_ProyectoFinal.Controllers
 
         public IActionResult Privacy()
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
             return View();
         }
 

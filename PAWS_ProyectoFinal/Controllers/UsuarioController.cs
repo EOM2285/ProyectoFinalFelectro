@@ -21,14 +21,29 @@ namespace PAWS_ProyectoFinal.Controllers
         // GET: Usuario
         public async Task<IActionResult> Index()
         {
-              return _context.Usuario != null ? 
+
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
+            var pAWSContext = _context.Usuario.Include(p => p.Roll);
+            return View(await pAWSContext.ToListAsync());
+
+            return _context.Usuario != null ? 
                           View(await _context.Usuario.ToListAsync()) :
                           Problem("Entity set 'PAWSContext.Usuario'  is null.");
+
         }
 
         // GET: Usuario/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
             if (id == null || _context.Usuario == null)
             {
                 return NotFound();
@@ -55,15 +70,17 @@ namespace PAWS_ProyectoFinal.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Apellidos,Correo,Contrasena,Telefono,UltimaConexion,EstadoUsuario, Id_rol")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("Id,Nombre,Apellidos,Correo,Contrasena,Telefono,UltimaConexion,EstadoUsuario")] Usuario usuario)
         {
+          
+
             if (ModelState.IsValid)
             {
-                usuario.Id_rol = 2;
+                usuario.RollId = 1;
                 usuario.EstadoUsuario = true;
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index","InicioSesion");
             }
             return View(usuario);
         }
@@ -71,6 +88,12 @@ namespace PAWS_ProyectoFinal.Controllers
         // GET: Usuario/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
+
             if (id == null || _context.Usuario == null)
             {
                 return NotFound();
@@ -89,8 +112,13 @@ namespace PAWS_ProyectoFinal.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Apellidos,Correo,Contrasena,Telefono,UltimaConexion,EstadoUsuario, Id_rol")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Apellidos,Correo,Contrasena,Telefono,UltimaConexion,EstadoUsuario, RollId")] Usuario usuario)
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
             if (id != usuario.Id)
             {
                 return NotFound();
@@ -122,6 +150,11 @@ namespace PAWS_ProyectoFinal.Controllers
         // GET: Usuario/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
             if (id == null || _context.Usuario == null)
             {
                 return NotFound();

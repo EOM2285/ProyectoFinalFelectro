@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PAWS_ProyectoFinal.Models;
 
@@ -11,9 +12,10 @@ using PAWS_ProyectoFinal.Models;
 namespace PAWS_ProyectoFinal.Migrations
 {
     [DbContext(typeof(PAWSContext))]
-    partial class PAWSContextModelSnapshot : ModelSnapshot
+    [Migration("20230820204049_TablaRoles")]
+    partial class TablaRoles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -160,8 +162,8 @@ namespace PAWS_ProyectoFinal.Migrations
 
                     b.Property<string>("NombreRoll")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.HasKey("IdRoll");
 
@@ -242,10 +244,6 @@ namespace PAWS_ProyectoFinal.Migrations
                         .IsRequired()
                         .HasMaxLength(70)
                         .HasColumnType("nvarchar(70)");
-
-                    b.Property<string>("StatusPedido")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TipoPago")
                         .IsRequired()

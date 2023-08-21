@@ -4,23 +4,23 @@
 
 namespace PAWS_ProyectoFinal.Migrations
 {
-    public partial class MigracionRoles : Migration
+    public partial class StatusPedido : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<int>(
-                name: "Id_rol",
-                table: "Usuario",
-                type: "int",
+            migrationBuilder.AddColumn<string>(
+                name: "StatusPedido",
+                table: "Venta",
+                type: "nvarchar(max)",
                 nullable: false,
-                defaultValue: 0);
+                defaultValue: "");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "Id_rol",
-                table: "Usuario");
+                name: "StatusPedido",
+                table: "Venta");
         }
     }
 }

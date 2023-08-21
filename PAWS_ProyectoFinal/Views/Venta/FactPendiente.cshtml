@@ -1,0 +1,114 @@
+@model IEnumerable<PAWS_ProyectoFinal.Models.Venta>
+
+@functions
+{
+    string formato(string number)
+    {
+        char coma = ',';
+        int control = 0;
+        string salida = "";
+        for (int i = number.Length - 1; i >= 0; i--)
+        {
+            control = control + 1;
+            if (control == 3)
+            {
+                if (number[i] == coma || i == 0)
+                {
+                    salida += number[i];
+                    control = 0;
+                }
+                else
+                {
+                    salida += number[i];
+                    salida += ".";
+                    control = 0;
+                }
+            }
+            else
+            {
+                salida += number[i];
+            }
+        }
+        string salidaFinal = "";
+        for (int i = salida.Length - 1; i >= 0; i--)
+        {
+            salidaFinal += salida[i];
+        }
+        return salidaFinal;
+    }
+
+    string fechaConvertida(DateTime fecha)
+    {
+        string fechaRet = fecha.ToString("dd/MM/yyyy");
+        return fechaRet;
+    }
+
+}
+
+
+<div class="container-xl">
+    <div class="table-responsive">
+        <table class="table table-info" id="myTable">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TipoPago)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ClienteId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.NombreCliente)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CorreoCliente)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.MontoPago)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FechaRegistro)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.StatusPedido)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TipoPago)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ClienteId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NombreCliente)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CorreoCliente)
+                        </td>
+                        <td>
+                            ¢@formato( item.MontoPago.ToString())
+                        </td>
+                        <td>
+                            @fechaConvertida( item.FechaRegistro)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StatusPedido)
+                        </td>
+                        <td>
+                            <a class="btn btn-buy" asp-action="Asignar" asp-route-id="@item.Id">Alistar</a>
+                            <a class="btn btn-buy" asp-action="Details" asp-route-id="@item.Id">Detalles</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+

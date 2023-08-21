@@ -18,7 +18,7 @@ namespace PAWS_ProyectoFinal.Controllers
             _context = context;
         }
 
-        // GET: Producto
+     
         public async Task<IActionResult> Index()
         {
             if (HttpContext.Session.GetString("nombre") == null)
@@ -30,7 +30,7 @@ namespace PAWS_ProyectoFinal.Controllers
             return View(await pAWSContext.ToListAsync());
         }
 
-        // GET: Producto/Details/5
+ 
         public async Task<IActionResult> Details(int? id)
         {
 
@@ -55,7 +55,7 @@ namespace PAWS_ProyectoFinal.Controllers
             return View(producto);
         }
 
-        // GET: Producto/Create
+    
         public IActionResult Create()
         {
             if (HttpContext.Session.GetString("nombre") == null)
@@ -66,10 +66,7 @@ namespace PAWS_ProyectoFinal.Controllers
             return View();
         }
 
-        // POST: Producto/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+    
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,CategoriaId,NombreProducto,DescripcionProducto,PrecioProducto,EstadoProducto,File")] Producto producto, IFormFile file)
         {
@@ -95,7 +92,7 @@ namespace PAWS_ProyectoFinal.Controllers
                     }
                     _context.Add(producto);
                     await _context.SaveChangesAsync();
-                    return RedirectToAction("Index", "InicioSesion");
+                    return RedirectToAction("Index");
 
                 }
                 //-------------------------------------------------------------
@@ -107,7 +104,7 @@ namespace PAWS_ProyectoFinal.Controllers
             return View(producto);
         }
 
-        // GET: Producto/Edit/5
+     
         public async Task<IActionResult> Edit(int? id)
         {
             if (HttpContext.Session.GetString("nombre") == null)
@@ -129,9 +126,7 @@ namespace PAWS_ProyectoFinal.Controllers
             return View(producto);
         }
 
-        // POST: Producto/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,CategoriaId,NombreProducto,DescripcionProducto,PrecioProducto,EstadoProducto, File")] Producto producto, IFormFile file)
@@ -190,7 +185,7 @@ namespace PAWS_ProyectoFinal.Controllers
 
 
 
-        // GET: Producto/Delete/5
+     
         public async Task<IActionResult> Delete(int? id)
         {
 
@@ -215,7 +210,7 @@ namespace PAWS_ProyectoFinal.Controllers
             return View(producto);
         }
 
-        // POST: Producto/Delete/5
+    
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

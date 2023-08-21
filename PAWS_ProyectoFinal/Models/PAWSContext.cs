@@ -11,6 +11,7 @@ namespace PAWS_ProyectoFinal.Models
         }
         public DbSet<Producto> Producto { get; set; }
         public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<Roll> Rolls { get; set; }
         public DbSet<Categoria> Categoria { get; set; }
         public DbSet<Venta> Venta { get; set; }
         public DbSet<DetalleVenta> DetalleVenta { get; set; }
@@ -44,6 +45,11 @@ namespace PAWS_ProyectoFinal.Models
                 U.Property(u=>u.Contrasena).IsRequired().HasMaxLength(16);
                 U.Property(u=>u.EstadoUsuario).IsRequired();
             });
+
+            modelBuilder.Entity<Roll>(R => {
+                R.HasKey(r => r.IdRoll);
+                R.Property(r => r.NombreRoll).IsRequired().HasMaxLength(20);
+            });
             modelBuilder.Entity<Venta>(V => {
                 V.HasKey(v => v.Id);
                 V.Property(v=>v.ClienteId).IsRequired();
@@ -59,6 +65,7 @@ namespace PAWS_ProyectoFinal.Models
 
 			modelBuilder.Entity<Producto>().HasOne(z => z.Categoria).WithMany(z => z.Productos).HasForeignKey(z => z.CategoriaId);
 			modelBuilder.Entity<DetalleVenta>().HasOne(z => z.Venta).WithMany(z => z.DetalleVentas).HasForeignKey(z => z.VentaId);
+			modelBuilder.Entity<Usuario>().HasOne(z => z.Roll).WithMany(z => z.Usuarios).HasForeignKey(z => z.RollId);
 
 
 

@@ -16,7 +16,12 @@ namespace PAWS_ProyectoFinal.Controllers
 		}
 		public IActionResult Index()
 		{
-			List<ItemCarrito> carrito = HttpContext.Session.GetJson<List<ItemCarrito>>("Carrito") ?? new List<ItemCarrito>();
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
+            List<ItemCarrito> carrito = HttpContext.Session.GetJson<List<ItemCarrito>>("Carrito") ?? new List<ItemCarrito>();
 
 			CarritoCompras carritoC = new()
 			{
@@ -28,7 +33,13 @@ namespace PAWS_ProyectoFinal.Controllers
 		}
 		public async Task<IActionResult> Agregar(int Id)
 		{
-			Producto producto = await _context.Producto.FindAsync(Id);
+
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
+            Producto producto = await _context.Producto.FindAsync(Id);
 
 			List<ItemCarrito> carrito = HttpContext.Session.GetJson<List<ItemCarrito>>("Carrito") ?? new List<ItemCarrito>();
 
@@ -52,7 +63,13 @@ namespace PAWS_ProyectoFinal.Controllers
 		}
 		public async Task<IActionResult> Disminuir(int Id)
 		{
-			List<ItemCarrito> carrito = HttpContext.Session.GetJson<List<ItemCarrito>>("Carrito");
+
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
+            List<ItemCarrito> carrito = HttpContext.Session.GetJson<List<ItemCarrito>>("Carrito");
 			
 			ItemCarrito itemCarrito = carrito.Where(c => c.ProductoId == Id).FirstOrDefault();
 
@@ -80,7 +97,12 @@ namespace PAWS_ProyectoFinal.Controllers
 		}
 		public async Task<IActionResult> Remover(int Id)
 		{
-			List<ItemCarrito> carrito = HttpContext.Session.GetJson<List<ItemCarrito>>("Carrito");
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
+            List<ItemCarrito> carrito = HttpContext.Session.GetJson<List<ItemCarrito>>("Carrito");
 			
 			carrito.RemoveAll(p => p.ProductoId == Id);
 
@@ -99,7 +121,12 @@ namespace PAWS_ProyectoFinal.Controllers
 		}
 		public IActionResult Eliminar()
 		{
-			HttpContext.Session.Remove("Carrito");
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
+            HttpContext.Session.Remove("Carrito");
 
 			return RedirectToAction("Index");
 		}
@@ -107,7 +134,12 @@ namespace PAWS_ProyectoFinal.Controllers
 
 		public async Task<IActionResult> Facturar() 
 		{
-			List<ItemCarrito> carrito = HttpContext.Session.GetJson<List<ItemCarrito>>("Carrito") ?? new List<ItemCarrito>();
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
+            List<ItemCarrito> carrito = HttpContext.Session.GetJson<List<ItemCarrito>>("Carrito") ?? new List<ItemCarrito>();
 
 			CarritoCompras carritoC = new()
 			{
@@ -119,6 +151,7 @@ namespace PAWS_ProyectoFinal.Controllers
 				ClienteId = 1,
 				NombreCliente = HttpContext.Session.GetString("nombre")+" "+ HttpContext.Session.GetString("apellido"),
 				CorreoCliente = HttpContext.Session.GetString("correo"),
+				StatusPedido = "Pendiente",
 				TipoPago ="Tarjeta",
 				MontoPago = carritoC.TotalFinal,
 				FechaRegistro = DateTime.Now

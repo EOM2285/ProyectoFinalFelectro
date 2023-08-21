@@ -1,0 +1,147 @@
+@model PAWS_ProyectoFinal.Models.Venta
+
+
+@functions
+{
+    string formato(string number)
+    {
+        char coma = ',';
+        int control = 0;
+        string salida = "";
+        for (int i = number.Length - 1; i >= 0; i--)
+        {
+            control = control + 1;
+            if (control == 3)
+            {
+                if (number[i] == coma || i == 0)
+                {
+                    salida += number[i];
+                    control = 0;
+                }
+                else
+                {
+                    salida += number[i];
+                    salida += ".";
+                    control = 0;
+                }
+            }
+            else
+            {
+                salida += number[i];
+            }
+        }
+        string salidaFinal = "";
+        for (int i = salida.Length - 1; i >= 0; i--)
+        {
+            salidaFinal += salida[i];
+        }
+        return salidaFinal;
+    }
+
+
+    string fechaConvertida(DateTime fecha)
+    {
+        string fechaRet = fecha.ToString("dd/MM/yyyy");
+        return fechaRet;
+    }
+
+}
+<br />
+<br />
+<div class="container">
+    <div>
+        <a asp-action="FactPendiente">Volver</a>
+    </div>
+    <div class="card border border-info col-lg">
+
+        <h5 style="text-align:center">Factura</h5>
+        <div class="row">
+            <div class="card-body col-lg-8 border border-info">
+                <div class="row">
+                    <div class="form-group col-lg-6">
+                        <label>
+                            @Html.DisplayNameFor(model => model.TipoPago)
+                        </label>
+                        <output class="form-control">
+                            @Html.DisplayFor(model => model.TipoPago)
+                        </output>
+                    </div>
+
+                    <div class="form-group col-lg-6">
+                        <label>
+                            @Html.DisplayNameFor(model => model.NombreCliente)
+                        </label>
+                        <output class="form-control">
+                            @Html.DisplayFor(model => model.NombreCliente)
+                        </output>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-lg-6">
+                        <label>
+                            @Html.DisplayNameFor(model => model.CorreoCliente)
+                        </label>
+                        <output class="form-control">
+                            @Html.DisplayFor(model => model.CorreoCliente)
+                        </output>
+                    </div>
+
+                    <div class="form-group col-lg-6">
+                        <label>
+                            @Html.DisplayNameFor(model => model.MontoPago)
+                        </label>
+                        <output class="form-control">
+                            ¢ @formato(Model.MontoPago.ToString())
+                        </output>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-lg-6">
+                        <label>
+                            @Html.DisplayNameFor(model => model.FechaRegistro)
+                        </label>
+                        <output class="form-control">
+                            @fechaConvertida(Model.FechaRegistro)
+                        </output>
+                    </div>
+
+                    <div class="form-group col-lg-6">
+                        <label>
+                            @Html.DisplayNameFor(model => model.StatusPedido)
+                        </label>
+                        <output class="form-control">
+                            @Html.DisplayFor(model => model.StatusPedido)
+                        </output>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body col-lg-4 border border-info">
+                <table class="table table-hover">
+                    <thead class="table-hover" style="text-align:center">
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.DetalleVentas)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem=>item.ProductoNombre)</td>
+                                <td style="text-align:center">@Html.DisplayFor(modelItem=>item.Cantidad)</td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+

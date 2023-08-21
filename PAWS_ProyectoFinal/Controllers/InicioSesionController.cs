@@ -19,6 +19,7 @@ namespace PAWS_ProyectoFinal.Controllers
             HttpContext.Session.Remove("nombre");
             HttpContext.Session.Remove("apellido");
             HttpContext.Session.Remove("correo");
+            HttpContext.Session.Remove("Roll");
             return View();
         }
 
@@ -35,6 +36,8 @@ namespace PAWS_ProyectoFinal.Controllers
                 HttpContext.Session.SetString("nombre", login.Nombre);
                 HttpContext.Session.SetString("apellido", login.Apellidos);
                 HttpContext.Session.SetString("correo", login.Correo);
+                HttpContext.Session.SetString("Roll", login.RollId.ToString());
+
 
                 //HttpContext.Session.Remove("correo");
 

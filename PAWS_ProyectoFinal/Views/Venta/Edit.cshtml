@@ -1,0 +1,103 @@
+@model PAWS_ProyectoFinal.Models.Venta
+
+
+@functions
+{
+    string formato(string number)
+    {
+        char coma = ',';
+        int control = 0;
+        string salida = "";
+        for (int i = number.Length - 1; i >= 0; i--)
+        {
+            control = control + 1;
+            if (control == 3)
+            {
+                if (number[i] == coma || i == 0)
+                {
+                    salida += number[i];
+                    control = 0;
+                }
+                else
+                {
+                    salida += number[i];
+                    salida += ".";
+                    control = 0;
+                }
+            }
+            else
+            {
+                salida += number[i];
+            }
+        }
+        string salidaFinal = "";
+        for (int i = salida.Length - 1; i >= 0; i--)
+        {
+            salidaFinal += salida[i];
+        }
+        return salidaFinal;
+    }
+
+
+    string fechaConvertida(DateTime fecha)
+    {
+        string fechaRet = fecha.ToString("dd/MM/yyyy");
+        return fechaRet;
+    }
+
+}
+
+<div class="card col-md-4">
+
+    <div class="card-body">
+        <h4>Venta</h4>
+        <hr />
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="TipoPago" class="control-label"></label>
+                <input asp-for="TipoPago" class="form-control" />
+                <span asp-validation-for="TipoPago" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClienteId" class="control-label"></label>
+                <input asp-for="ClienteId" class="form-control" />
+                <span asp-validation-for="ClienteId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NombreCliente" class="control-label"></label>
+                <input asp-for="NombreCliente" class="form-control" />
+                <span asp-validation-for="NombreCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CorreoCliente" class="control-label"></label>
+                <input asp-for="CorreoCliente" class="form-control" />
+                <span asp-validation-for="CorreoCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MontoPago" class="control-label"></label>
+                <input asp-for="MontoPago" class="form-control" />
+                <span asp-validation-for="MontoPago" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaRegistro" class="control-label"></label>
+                <input asp-for="FechaRegistro" class="form-control" />
+                <span asp-validation-for="FechaRegistro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StatusPedido" class="control-label"></label>
+                <input asp-for="StatusPedido" class="form-control" />
+                <span asp-validation-for="StatusPedido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="FactPendiente">Volver</a>
+</div>
+
