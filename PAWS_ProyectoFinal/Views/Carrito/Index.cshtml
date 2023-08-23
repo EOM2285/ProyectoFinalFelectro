@@ -43,48 +43,67 @@
 	}
 }
 
+<div class="container-xl ">
+	<div class="table-responsive ">
+		<div class="table-wrapper">
+			<div class="table-title">
+				<div class="row">
+					<div class="col-sm-6">
+						<h2>Carrito de <b>Compras</b></h2>
+					</div>
+					<div class="col-sm-6">
+						<a class="btn btn-danger" asp-action="Eliminar"><span class="material-symbols-outlined">mop</span><span>Limpiar Carrito</span></a>
+						@*<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>*@
+					</div>
+				</div>
+			</div>
+			@if (Model.ItemCarrito.Count > 0)
+			{
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Imagen</th>
+							<th>Producto</th>
+							<th>Cantidad</th>
+							<th>Agregar/Eliminar</th>
+							<th>Precio</th>
+							<th>Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model.ItemCarrito)
+						{
+							<tr>
+								<td><img src="data:image/jpg; base64, @item.Imagen" class="rounded" width="170"></td>
+								<td>@item.NomProducto</td>
+								<td>@item.Cantidad</td>
+								<td>
+									<a class="agregar" asp-action="Agregar" asp-route-id="@item.ProductoId"><span class="material-symbols-outlined">add</span></a>
+									<a class="disminuir" asp-action="Disminuir" asp-route-id="@item.ProductoId"><span class="material-symbols-outlined">remove</span></a>
+									<a class="eliminar" asp-action="Remover" asp-route-id="@item.ProductoId"><span class="material-symbols-outlined">delete</span></a>
+								</td>
+								<td>¢@formato(@item.Precio.ToString())</td>
+								<td>¢@formato(@Model.ItemCarrito.Where(x => x.ProductoId == item.ProductoId).Sum(x => x.Cantidad * x.Precio).ToString())</td>
+							</tr>
 
-@if (Model.ItemCarrito.Count > 0)
-{
-	<table class="table">
-		<tr>
-			<th>Imagen</th>
-			<th>Producto</th>
-			<th>Cantidad</th>
-			<th>Agregar/Eliminar</th>
-			<th>Precio</th>
-			<th>Total</th>
-		</tr>
+						}
+						<tr class="table-bordered table-active table-light">
+							<td class="text-right" style="font-weight: 800" colspan="6">Total a pagar: ¢@formato(@Model.TotalFinal.ToString())</td>
+						</tr>
 
-		@foreach (var item in Model.ItemCarrito)
-		{
-			<tr>
-				<td><img src="data:image/jpg; base64, @item.Imagen" class="img-fluid" alt="" width="100"></td>				
-				<td>@item.NomProducto</td>
-				<td>@item.Cantidad</td>
-				<td>
-					<a class="agregar" asp-action="Agregar" asp-route-id="@item.ProductoId"><span class="material-symbols-outlined">add</span></a>
-					<a class="disminuir" asp-action="Disminuir" asp-route-id="@item.ProductoId"><span class="material-symbols-outlined">remove</span></a>
-					<a class="eliminar" asp-action="Remover" asp-route-id="@item.ProductoId"><span class="material-symbols-outlined">delete</span></a>
-				</td>
-				<td>¢@formato(@item.Precio.ToString())</td>
-				<td>¢@formato(@Model.ItemCarrito.Where(x => x.ProductoId == item.ProductoId).Sum(x => x.Cantidad * x.Precio).ToString())</td>
-			</tr>
-		}
-		<tr>
-			<td class="text-right" colspan="4">Total a pagar: ¢@formato(@Model.TotalFinal.ToString())</td>
-		</tr>
-		<tr>
-			<td class="text-right" colspan="4">
-				<a class="btn btn-danger" asp-action="Eliminar">Limpiar Carrito</a>
-				<a class="btn btn-success" asp-action="Facturar">Comprar</a>
-			</td>
-		</tr>
-	</table>
+					</tbody>
+				</table>
+				<div class="row">
+					<div class="col d-flex">
+						<a class="btn btn-success" asp-action="Facturar">Comprar</a>
+					</div>
 
-}
-else
-{
-	<h3 class="display-4-text-center">El carrito está vacío</h3>
-}
-
+				</div>
+			}
+			else
+			{
+				<h3 class="display-4-text-center">El carrito está vacío</h3>
+			}
+		</div>
+	</div>
+</div>

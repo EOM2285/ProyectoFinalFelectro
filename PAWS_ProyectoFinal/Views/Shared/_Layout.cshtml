@@ -26,7 +26,7 @@
 <body style="background-color: white">
     <header id="header" class="d-flex align-items-center">
         <div class="container d-flex align-items-center justify-content-between" style="align-items:center; justify-content:space-between">
-            <h1 class="logo"><a href="index.html">Felectro<span>.</span></a></h1>
+            <h1 class="logo"><a asp-controller="Home" asp-action="Index">Felectro<span>.</span></a></h1>
 
             <nav id="navbar" class="navbar">
                 <ul>
@@ -38,6 +38,7 @@
 
                     @if (Context.Session.GetString("Roll") == "2")
                     {
+                        <li><a class="nav-link scrollto" asp-area="" asp-controller="Carrito" asp-action="Index"><span class="material-symbols-outlined">shopping_cart</span></a></li>
                         <li><a class="nav-link scrollto" asp-area=" " asp-controller="Usuario" asp-action="Index">Usuario</a></li>
                         <li><a class="nav-link scrollto" asp-area=" " asp-controller="Home" asp-action="Privacy">Privacy</a></li>
                         <li><a class="nav-link scrollto" asp-area="" asp-controller="Categoria" asp-action="Index">Categorias</a></li>
@@ -106,7 +107,7 @@
         });
     </script>
 
-    }
+    
 
 
     @await RenderSectionAsync("Scripts", required: false)

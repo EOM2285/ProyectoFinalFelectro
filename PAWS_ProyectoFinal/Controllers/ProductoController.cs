@@ -68,6 +68,7 @@ namespace PAWS_ProyectoFinal.Controllers
 
     
         [ValidateAntiForgeryToken]
+        [HttpPost]
         public async Task<IActionResult> Create([Bind("Id,CategoriaId,NombreProducto,DescripcionProducto,PrecioProducto,EstadoProducto,File")] Producto producto, IFormFile file)
         {
             if (HttpContext.Session.GetString("nombre") == null)
