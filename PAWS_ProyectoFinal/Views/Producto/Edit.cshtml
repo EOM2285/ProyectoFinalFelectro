@@ -1,56 +1,88 @@
 @model PAWS_ProyectoFinal.Models.Producto
 
-<h4>Producto</h4>
-<hr />
+
+
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit" enctype="multipart/form-data" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="CategoriaId" class="control-label"></label>
-                <select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId"></select>
-                <span asp-validation-for="CategoriaId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NombreProducto" class="control-label"></label>
-                <input asp-for="NombreProducto" class="form-control" />
-                <span asp-validation-for="NombreProducto" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DescripcionProducto" class="control-label"></label>
-                <input asp-for="DescripcionProducto" class="form-control" />
-                <span asp-validation-for="DescripcionProducto" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PrecioProducto" class="control-label"></label>
-                <input asp-for="PrecioProducto" class="form-control" />
-                <span asp-validation-for="PrecioProducto" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="EstadoProducto" /> @Html.DisplayNameFor(model => model.EstadoProducto)
-                </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="File" class="control-label"></label>
-                <input type="file" asp-for="File" class="form-control" />
-                <span asp-validation-for="File" class="text-danger"></span>
-            </div>
-            <input type="hidden" asp-for="ImagenProducto" />
-                        
-            <div class="form-group">
-                <img src="data:image/jpg; base64, @Model.ImagenProducto" class="rounded" width="170">
-            </div>
-
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
+	<div class="col-md-8 mb-4 ">
+		<div class="card mb-4 contenedor">
+			<div class="card-header py-3">
+				<h2 class="mb-0" style="text-align:center">Editar <b>Producto</b></h2>
+			</div>
+			<div class="card-body">
+				<form asp-action="Edit" enctype="multipart/form-data" method="post">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="row">
+						<div class="col">
+							<div class="row">
+								<div class="col">
+									<div class="form-group">
+										<label asp-for="NombreProducto" class="control-label"></label>
+										<input asp-for="NombreProducto" class="form-control" />
+										<span asp-validation-for="NombreProducto" class="text-danger"></span>
+									</div>
+								</div>
+								<div class="col">
+									<div class="form-group">
+										<label asp-for="CategoriaId" class="control-label"></label>
+										<select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId"></select>
+										<span asp-validation-for="CategoriaId" class="text-danger"></span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="form-group">
+										<label asp-for="DescripcionProducto" class="control-label"></label>
+										<input asp-for="DescripcionProducto" class="form-control" />
+										<span asp-validation-for="DescripcionProducto" class="text-danger"></span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="form-group">
+										<label asp-for="PrecioProducto" class="control-label">Precio del Producto</label>
+										<input asp-for="PrecioProducto" class="form-control" />
+										<span asp-validation-for="PrecioProducto" class="text-danger"></span>
+									</div>
+								</div>
+								<div class="col">
+									<div class="form-group">
+										<div class="form-check form-switch" style="margin-top: 35px; margin-left:18px">
+											<label class="form-check-lable">
+												<input class="form-check-input" type="checkbox" asp-for="EstadoProducto" /> @Html.DisplayNameFor(model => model.EstadoProducto)
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="form-group">
+										<label asp-for="File" class="control-label"></label>
+										<input type="file" asp-for="File" class="form-control" />
+										<span asp-validation-for="File" class="text-danger"></span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="form-group">
+										<img src="data:image/jpg; base64, @Model.ImagenProducto" class="imgE">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<input type="submit" value="Save" class="btn btn-primary" />
+							</div>
+						</div>
+					</div>
+				</form>
+				<div>
+					<a asp-action="Index">Back to List</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-

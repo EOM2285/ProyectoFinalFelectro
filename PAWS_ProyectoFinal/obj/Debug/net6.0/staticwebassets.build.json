@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "USQqK+ov7EV3gSxyw1tG9fpIwDZm4Qu+Ltxt4Cvzmqc=",
+  "Hash": "pqscn1o1gdPAp6kE3zO23f4J5SBS+HnJs8jrlhSakdk=",
   "Source": "PAWS_ProyectoFinal",
   "BasePath": "_content/PAWS_ProyectoFinal",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PAWS_ProyectoFinal.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\css\\card.css",
+      "SourceId": "PAWS_ProyectoFinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\",
+      "BasePath": "_content/PAWS_ProyectoFinal",
+      "RelativePath": "css/card.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\card.css"
     },
     {
       "Identity": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\css\\createIndex.css",

@@ -3,100 +3,123 @@
 
 @functions
 {
-    string formato(string number)
-    {
-        char coma = ',';
-        int control = 0;
-        string salida = "";
-        for (int i = number.Length - 1; i >= 0; i--)
-        {
-            control = control + 1;
-            if (control == 3)
-            {
-                if (number[i] == coma || i == 0)
-                {
-                    salida += number[i];
-                    control = 0;
-                }
-                else
-                {
-                    salida += number[i];
-                    salida += ".";
-                    control = 0;
-                }
-            }
-            else
-            {
-                salida += number[i];
-            }
-        }
+	string formato(string number)
+	{
+		char coma = ',';
+		int control = 0;
+		string salida = "";
+		for (int i = number.Length - 1; i >= 0; i--)
+		{
+			control = control + 1;
+			if (control == 3)
+			{
+				if (number[i] == coma || i == 0)
+				{
+					salida += number[i];
+					control = 0;
+				}
+				else
+				{
+					salida += number[i];
+					salida += ".";
+					control = 0;
+				}
+			}
+			else
+			{
+				salida += number[i];
+			}
+		}
 
-        string salidaFinal = "";
-        for (int i = salida.Length - 1; i >= 0; i--)
-        {
-            salidaFinal += salida[i];
-        }
-        return salidaFinal;
-    }
+		string salidaFinal = "";
+		for (int i = salida.Length - 1; i >= 0; i--)
+		{
+			salidaFinal += salida[i];
+		}
+		return salidaFinal;
+	}
 }
 
 
-<div class="container">
-    <h4>Producto</h4>
-    <hr />
-    <div class=" borde-marca card col-sm-12 shadow-lg p-3 mb-5 bg-white rounded">
-
-        <div class="card-body ">
-            <div class="row">
-                <div class="col-6">
-                    <label >
-                        @Html.DisplayNameFor(model => model.NombreProducto):
-                    </label>
-                    <div class="form-control" >
-                        @Html.DisplayFor(model => model.NombreProducto)
-                    </div>
-                    <label>
-                        @Html.DisplayNameFor(model => model.DescripcionProducto)
-                    </label>
-                    <div class="form-control">
-                        @Html.DisplayFor(model => model.DescripcionProducto)
-                    </div>
-                    <label>
-                        @Html.DisplayNameFor(model => model.PrecioProducto)
-                    </label>
-                    <div class="form-control">
-                        ¢@formato(Model.PrecioProducto.ToString())
-                    </div>
-                    <label >
-                        @Html.DisplayNameFor(model => model.EstadoProducto)
-                    </label>
-                    <div >
-                        @Html.DisplayFor(model => model.EstadoProducto)
-                    </div>                    
-                    <div>
-                        @Html.DisplayNameFor(model => model.Categoria)
-                    </div>
-                    <div class ="form-control">
-                        @Html.DisplayFor(model => model.Categoria.NombreCategoria)
-                    </div>
-                   
-                </div>
-                <div class="col-6" style="text-align:center; align-self:center">
-                    <div >
-                        <img src="data:image/jpg; base64, @Model.ImagenProducto" class="rounded" width="300">
-                    </div>
-                </div>
-            </div>           
-        </div>   
-
-    </div>
-
-    <div>
-        <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-        <a asp-action="Index">Back to List</a>
-    </div>
-
+<div class="row">
+	<div class="col-md-8 mb-4 ">
+		<div class="card mb-4 contenedor">
+			<div class="card-header py-3">
+				<h2 class="mb-0" style="text-align:center">Detalle <b>Producto</b></h2>
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col">
+						<div class="row">
+							<div class="col">
+								<div class="form-group">
+									<label>
+										Nombre del Producto
+									</label>
+									<div class="form-control">
+										@Html.DisplayFor(model => model.NombreProducto)
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-group">
+									<label>
+										Categoría
+									</label>
+									<div class="form-control">
+										@Html.DisplayFor(model => model.Categoria.NombreCategoria)
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="form-group">
+									<label>
+										Descripción
+									</label>
+									<div class="form-control">
+										@Html.DisplayFor(model => model.DescripcionProducto)
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="form-group">
+									<label>
+										Precio
+									</label>
+									<div class="form-control">
+										¢@formato(Model.PrecioProducto.ToString())
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-group">
+									<label>
+											Estado del Producto 
+										</label>
+								<div>
+										@Html.DisplayFor(model => model.EstadoProducto)
+								</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="form-group">
+									<img src="data:image/jpg; base64, @Model.ImagenProducto" class="imgE">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="margin-top: 8px;">
+					<a asp-action="Index" class="btn btn-secondary" style="font-size: 12px;">Volver</a> |
+					<a asp-action="Edit" class="btn btn-primary" style="font-size: 12px;" asp-route-id="@Model?.Id">Editar</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-
-
-

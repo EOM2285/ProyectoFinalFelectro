@@ -1,90 +1,82 @@
 @model PAWS_ProyectoFinal.Models.Producto
 
 
-<div class="container-sm">
-	<div class="table-responsive ">
-		<div class="card">
-			<div class="table-wrapper">
-				<div class="table-title">
+<div class="row">
+	<div class="col-md-8 mb-4 ">
+		<div class="card mb-4 contenedor">
+			<div class="card-header py-3">
+				<h2 class="mb-0" style="text-align:center">Añadir <b>Producto</b></h2>
+			</div>
+			<div class="card-body">
+				<form asp-action="Create" enctype="multipart/form-data" method="post">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 					<div class="row">
 						<div class="col">
-							<h2 style="text-align:center">Añadir <b>Producto</b></h2>
+							<div class="row">
+								<div class="col">
+									<div class="form-group">
+										<label asp-for="NombreProducto" class="control-label">Nombre del Producto</label>
+										<input asp-for="NombreProducto" class="form-control" />
+										<span asp-validation-for="NombreProducto" class="text-danger"></span>
+									</div>
+								</div>
+								<div class="col">
+									<div class="form-group">
+										<label asp-for="CategoriaId" class="control-label">Tipo de Categoría</label>
+										<select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId"></select>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="form-group">
+										<label asp-for="DescripcionProducto" class="control-label">Descripción del Producto</label>
+										<input asp-for="DescripcionProducto" class="form-control" />
+										<span asp-validation-for="DescripcionProducto" class="text-danger"></span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="form-group">
+										<label asp-for="PrecioProducto" class="control-label">Precio del Producto</label>
+										<input asp-for="PrecioProducto" class="form-control" />
+										<span asp-validation-for="PrecioProducto" class="text-danger"></span>
+									</div>
+								</div>
+								<div class="col">
+									<div class="form-group">
+										<div class="form-check form-switch" style="margin-top: 35px; margin-left:18px">
+											<label class="form-check-lable">
+												<input class="form-check-input" type="checkbox" asp-for="EstadoProducto" /> @Html.DisplayNameFor(model => model.EstadoProducto)
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="form-group">
+										<label asp-for="File" class="control-label">Archivo de Imagen</label>
+										<input type="file" asp-for="File" class="form-control" />
+										<span asp-validation-for="File" class="text-danger"></span>
+									</div>
+								</div>
+							</div>
 						</div>
-
+					</div>
+				</form>
+				<div class="row">
+					<div class="botonCompra">
+						<button class="botonC" style="margin-bottom: 20px; margin-top: 10px;" value="Create" type="submit"><span></span>Añadir</button>
+					</div>
+					<div>
+						<a asp-action="Index">Regresar</a>
 					</div>
 				</div>
-				<div class="card-body">
-					<form asp-action="Create" enctype="multipart/form-data" method="post">
-						<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-						<div class="row">
-							<div class="col">
-								<div class="row">
-									<div class="col">
-										<div class="form-group">
-											<label asp-for="NombreProducto" class="control-label">Nombre del Producto</label>
-											<input asp-for="NombreProducto" class="form-control" />
-											<span asp-validation-for="NombreProducto" class="text-danger"></span>
-										</div>
-									</div>
-									<div class="col">
-										<div class="form-group">
-											<label asp-for="CategoriaId" class="control-label">Tipo de Categoría</label>
-											<select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId"></select>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col">
-										<div class="form-group">
-											<label asp-for="DescripcionProducto" class="control-label">Descripción del Producto</label>
-											<input asp-for="DescripcionProducto" class="form-control" />
-											<span asp-validation-for="DescripcionProducto" class="text-danger"></span>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col">
-										<div class="form-group">
-											<label asp-for="PrecioProducto" class="control-label">Precio del Producto</label>
-											<input asp-for="PrecioProducto" class="form-control" />
-											<span asp-validation-for="PrecioProducto" class="text-danger"></span>
-										</div>
-									</div>
-									<div class="col">
-										<div class="form-group">
-											<div class="form-check form-switch" style="margin-top: 35px; margin-left:18px">
-												<label class="form-check-lable">
-													<input class="form-check-input" type="checkbox" asp-for="EstadoProducto" /> @Html.DisplayNameFor(model => model.EstadoProducto)
-												</label>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col">
-										<div class="form-group">
-											<label asp-for="File" class="control-label">Archivo de Imagen</label>
-											<input type="file" asp-for="File" class="form-control" />
-											<span asp-validation-for="File" class="text-danger"></span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col d-flex justify-content-left">
-								<button class="btn btn-success" style="margin-bottom: 20px; margin-top: 10px" value="Create" type="submit">Añadir</button>
-							</div>
-							<div>
-								<a asp-action="Index">Regresar</a>
-							</div>
-						</div>
-					</form>
-
-				</div>
-
 			</div>
 		</div>
 	</div>
-
 </div>
+
+
