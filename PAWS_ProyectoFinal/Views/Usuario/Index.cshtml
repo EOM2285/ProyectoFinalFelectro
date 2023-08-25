@@ -1,38 +1,30 @@
 @model IEnumerable<PAWS_ProyectoFinal.Models.Usuario>
 
+  
 
-<div class="container">
-    <div class="table-responsive ">       
+<div class="container-xl ">
+    <div class="table-responsive ">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2>Usuarios</h2>
+                    </div>
+                    <div class="col-sm-6">
+                        <a asp-action="CreateAdmin" class="btn btn-success"><span class="material-symbols-outlined">add_circle</span><span>Usuario</span></a>
+                    </div>
+                </div>
+            </div>
 
-            <table class="table  table-dark">
-                <thead class="table-dark">
+            <table class="table table-striped table-hover display" id="myTable">
+                <thead>
                     <tr>
-                        <th style="width: 10%">
-                            @Html.DisplayNameFor(model => model.Nombre)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Apellidos)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Correo)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Contrasena)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Telefono)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.UltimaConexion)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.EstadoUsuario)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Roll.NombreRoll)
-                        </th>
-
-                        <th style="width: 20%"></th>
+                        <th style="width:auto">@Html.DisplayNameFor(model => model.Nombre)</th>                       
+                        <th>@Html.DisplayNameFor(model => model.Correo)</th>
+                        <th>@Html.DisplayNameFor(model => model.Telefono)</th>
+                        <th>@Html.DisplayNameFor(model => model.EstadoUsuario)</th>
+                        <th>@Html.DisplayNameFor(model => model.Roll.NombreRoll)</th>
+                        <th > Funciones</th>
                     </tr>
                 </thead>
 
@@ -40,44 +32,23 @@
                     @foreach (var item in Model)
                     {
                         <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Nombre) @Html.DisplayFor(modelItem => item.Apellidos)</td>                          
+                            <td>@Html.DisplayFor(modelItem => item.Correo)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Telefono)</td>
+                            <td>@Html.DisplayFor(modelItem => item.EstadoUsuario)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Roll.NombreRoll)</td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.Nombre)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Apellidos)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Correo)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Contrasena)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Telefono)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.UltimaConexion)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.EstadoUsuario)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Roll.NombreRoll)
-                            </td>
-                            <td>
-                            <div style="text-align:center">
-                               <a asp-action="Edit" asp-route-id="@item.Id">Editar</a>                                
-                                <a asp-action="Details" asp-route-id="@item.Id">Detalles</a>
-                                <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
-                            </div>
-                                   
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="edit"><span class="material-symbols-outlined">edit</span></a>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="details"><span class="material-symbols-outlined">visibility</span></a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="delete"><span class="material-symbols-outlined">delete</span></a>
                             </td>
                         </tr>
                     }
                 </tbody>
             </table>
         </div>
-   
+    </div>
+
 </div>
 
 

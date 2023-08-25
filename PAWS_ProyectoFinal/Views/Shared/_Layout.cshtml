@@ -38,9 +38,8 @@
 
                     @if (Context.Session.GetString("Roll") == "2")
                     {
-                        <li><a class="nav-link scrollto" asp-area="" asp-controller="Carrito" asp-action="Index"><span class="material-symbols-outlined">shopping_cart</span></a></li>
-                        <li><a class="nav-link scrollto" asp-area=" " asp-controller="Usuario" asp-action="Index">Usuario</a></li>
-                        <li><a class="nav-link scrollto" asp-area=" " asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+                       
+                        <li><a class="nav-link scrollto" asp-area=" " asp-controller="Usuario" asp-action="Index">Usuarios</a></li>                        
                         <li><a class="nav-link scrollto" asp-area="" asp-controller="Categoria" asp-action="Index">Categorias</a></li>
                         <li><a class="nav-link scrollto" asp-area="" asp-controller="Producto" asp-action="Index">Productos</a></li>
                         <li class="nav-item dropdown" style="justify-content:center">
@@ -51,6 +50,7 @@
                                 <li><a class="nav-link scrollto" asp-area="" asp-controller="Venta" asp-action="FactPendiente">Pendientes</a></li>
                                 <li><a class="nav-link scrollto" asp-area="" asp-controller="Venta" asp-action="FactProceso">En Proceso</a></li>
                                 <li><a class="nav-link scrollto" asp-area="" asp-controller="Venta" asp-action="FactParaEntrega">Para Entrega</a></li>
+                                <li><a class="nav-link scrollto" asp-area="" asp-controller="Venta" asp-action="FactEntregada">Entregados</a></li>
                             </ul>
                         </li>
                     }
@@ -60,9 +60,7 @@
                             <h6 class="form-control fondo-marca">@Context.Session.GetString("nombre") @Context.Session.GetString("apellido")</h6>
                         </a>
 
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">                            
                             <li><a asp-controller="InicioSesion" asp-action="Index">Cerrar Sesion</a></li>
                         </ul>
                     </li>

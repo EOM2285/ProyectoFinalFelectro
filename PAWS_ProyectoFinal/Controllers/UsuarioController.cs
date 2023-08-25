@@ -27,12 +27,9 @@ namespace PAWS_ProyectoFinal.Controllers
                 return RedirectToAction("Index", "InicioSesion");
             }
 
-            var pAWSContext = _context.Usuario.Include(p => p.Roll);
+            var pAWSContext = _context.Usuario.Include(p => p.Roll).Where(x=> x.RollId == 2);
             return View(await pAWSContext.ToListAsync());
-
-            return _context.Usuario != null ? 
-                          View(await _context.Usuario.ToListAsync()) :
-                          Problem("Entity set 'PAWSContext.Usuario'  is null.");
+           
 
         }
 
@@ -49,8 +46,8 @@ namespace PAWS_ProyectoFinal.Controllers
                 return NotFound();
             }
 
-            var usuario = await _context.Usuario
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var usuario = await _context.Usuario.Include(x=>x.Roll).FirstOrDefaultAsync(m => m.Id == id);
+
             if (usuario == null)
             {
                 return NotFound();
@@ -59,15 +56,13 @@ namespace PAWS_ProyectoFinal.Controllers
             return View(usuario);
         }
 
-        // GET: Usuario/Create
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Usuario/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+      
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nombre,Apellidos,Correo,Contrasena,Telefono,UltimaConexion,EstadoUsuario")] Usuario usuario)
@@ -85,7 +80,36 @@ namespace PAWS_ProyectoFinal.Controllers
             return View(usuario);
         }
 
-        // GET: Usuario/Edit/5
+        //----------------------------------------------------------------------------------------------------------------------------------------------------
+
+        [HttpGet]
+        public IActionResult CreateAdmin()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateAdmin([Bind("Id,Nombre,Apellidos,Correo,Contrasena,Telefono,UltimaConexion,EstadoUsuario")] Usuario usuario)
+        {
+
+
+            if (ModelState.IsValid)
+            {
+                usuario.RollId = 2;
+                usuario.EstadoUsuario = true;
+                _context.Add(usuario);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+            return View(usuario);
+        }
+
+
+        //---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
         public async Task<IActionResult> Edit(int? id)
         {
             if (HttpContext.Session.GetString("nombre") == null)
@@ -107,9 +131,7 @@ namespace PAWS_ProyectoFinal.Controllers
             return View(usuario);
         }
 
-        // POST: Usuario/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Apellidos,Correo,Contrasena,Telefono,UltimaConexion,EstadoUsuario, RollId")] Usuario usuario)
@@ -160,8 +182,7 @@ namespace PAWS_ProyectoFinal.Controllers
                 return NotFound();
             }
 
-            var usuario = await _context.Usuario
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var usuario = await _context.Usuario.Include(x=>x.Roll).FirstOrDefaultAsync(m => m.Id == id);
             if (usuario == null)
             {
                 return NotFound();

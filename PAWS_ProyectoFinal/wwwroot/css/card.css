@@ -5,6 +5,19 @@
     background: #eeeeee
 }
 
+.card2 {
+   
+    margin-top: 60px;
+    margin-left: 5%;
+    background: #eeeeee
+}
+.card-header2 {
+    
+    background: #5208B6;
+    color: yellow;
+    
+}
+
 .card-header {
     padding-bottom: 15px;
     background: #5208B6;

@@ -52,9 +52,10 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2>En proceso</h2>
+                        <h2>Entregados</h2>
                     </div>
                     <div class="col-sm-6">
+                        
                     </div>
                 </div>
             </div>
@@ -64,12 +65,11 @@
                     <tr>
                         <th>@Html.DisplayNameFor(model => model.TipoPago)</th>
                         <th>@Html.DisplayNameFor(model => model.ClienteId)</th>
-                        <th style="width:auto">@Html.DisplayNameFor(model => model.NombreCliente)</th>
+                        <th>@Html.DisplayNameFor(model => model.NombreCliente)</th>
                         <th>@Html.DisplayNameFor(model => model.CorreoCliente)</th>
                         <th>@Html.DisplayNameFor(model => model.MontoPago)</th>
                         <th>@Html.DisplayNameFor(model => model.FechaRegistro)</th>
-                        <th>@Html.DisplayNameFor(model => model.StatusPedido)</th>
-                        <th></th>
+                        <th>@Html.DisplayNameFor(model => model.StatusPedido)</th>                       
                     </tr>
                 </thead>
                 <tbody>
@@ -83,10 +83,7 @@
                             <td>¢@formato( item.MontoPago.ToString())</td>
                             <td>@fechaConvertida( item.FechaRegistro)</td>
                             <td>@Html.DisplayFor(modelItem => item.StatusPedido)</td>
-                            <td>
-                                <a class="btn btn-buy" asp-action="Terminar" asp-route-id="@item.Id">Terminado</a>
-                                <a class="btn btn-buy" asp-action="Details" asp-route-id="@item.Id">Detalles</a>
-                            </td>
+                            
                         </tr>
                     }
                 </tbody>
@@ -94,4 +91,6 @@
         </div>
     </div>
 </div>
+
+
 

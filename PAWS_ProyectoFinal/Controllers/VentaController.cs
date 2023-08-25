@@ -22,6 +22,10 @@ namespace PAWS_ProyectoFinal.Controllers
        
         public async Task<IActionResult> FactPendiente()
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
             var factura = _context.Venta.Where(v => v.StatusPedido =="Pendiente");
             return View(await factura.ToListAsync());
             
@@ -29,6 +33,10 @@ namespace PAWS_ProyectoFinal.Controllers
 
         public async Task<IActionResult> FactProceso()
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
             var factura = _context.Venta.Where(v => v.StatusPedido == "En Proceso");
             return View(await factura.ToListAsync());
 
@@ -36,15 +44,32 @@ namespace PAWS_ProyectoFinal.Controllers
 
         public async Task<IActionResult> FactParaEntrega()
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
             var factura = _context.Venta.Where(v => v.StatusPedido == "Para Entrega");
             return View(await factura.ToListAsync());
 
         }
 
+        public async Task<IActionResult> FactEntregada()
+        {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+            var factura = _context.Venta.Where(v => v.StatusPedido == "Entregada");
+            return View(await factura.ToListAsync());
 
+        }
 
         public async Task<IActionResult> Details(int? id)
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
             if (id == null || _context.Venta == null)
             {
                 return NotFound();
@@ -63,6 +88,11 @@ namespace PAWS_ProyectoFinal.Controllers
        
         public async Task<IActionResult> Asignar(int? id)
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
             if (id == null || _context.Venta == null)
             {
                 return NotFound();
@@ -94,6 +124,11 @@ namespace PAWS_ProyectoFinal.Controllers
 
         public async Task<IActionResult> Terminar(int? id)
         {
+            if (HttpContext.Session.GetString("nombre") == null)
+            {
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
             if (id == null || _context.Venta == null)
             {
                 return NotFound();
@@ -124,40 +159,42 @@ namespace PAWS_ProyectoFinal.Controllers
         }
 
 
-
-        /*
-            [HttpPost]
-            [ValidateAntiForgeryToken]
-            public async Task<IActionResult> Edit(int id, [Bind("Id,TipoPago,ClienteId,NombreCliente,CorreoCliente,MontoPago,FechaRegistro,StatusPedido")] Venta venta)
+        public async Task<IActionResult> Entrega(int? id)
+        {
+            if (HttpContext.Session.GetString("nombre") == null)
             {
-                if (id != venta.Id)
+                return RedirectToAction("Index", "InicioSesion");
+            }
+
+            if (id == null || _context.Venta == null)
+            {
+                return NotFound();
+            }
+            var venta = await _context.Venta.FindAsync(id);
+            if (venta == null)
+            {
+                return NotFound();
+            }
+            try
+            {
+                venta.StatusPedido = "Entregada";
+                _context.Update(venta);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!VentaExists(venta.Id))
                 {
                     return NotFound();
                 }
-
-                if (ModelState.IsValid)
+                else
                 {
-                    try
-                    {
-                        _context.Update(venta);
-                        await _context.SaveChangesAsync();
-                    }
-                    catch (DbUpdateConcurrencyException)
-                    {
-                        if (!VentaExists(venta.Id))
-                        {
-                            return NotFound();
-                        }
-                        else
-                        {
-                            throw;
-                        }
-                    }
-                    return RedirectToAction(nameof(Index));
+                    throw;
                 }
-                return View(venta);
             }
-         */
+            return RedirectToAction("FactEntregada");
+        }
+
         private bool VentaExists(int id)
         {
           return (_context.Venta?.Any(e => e.Id == id)).GetValueOrDefault();
