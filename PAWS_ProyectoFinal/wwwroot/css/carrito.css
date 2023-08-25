@@ -1,0 +1,29 @@
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+
+a.agregar span {
+    color: #001e5d;
+}
+
+a.agregar:hover span {
+    color: #0400ff;
+}
+
+a.disminuir span {
+    color: #008eff;
+}
+
+a.disminuir:hover span {
+    color: aquamarine;
+}
+
+a.eliminar span {
+    color: #b53d3d;
+}
+
+a.eliminar:hover span {
+    color: #ff0000;
+}

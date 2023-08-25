@@ -12,10 +12,37 @@
     border-radius: 3px 3px 0 0;
 }
 
-.mb-0 {
-    margin: 5px 0 0;
-    font-size: 24px;
+.btn.btn-primary {
+    background: #2553b8;
+    border: none;
 }
+
+    .btn.btn-primary:hover {
+        background: #3985f8;
+    }
+
+.btn.btn-secondary {
+    background: #807e7e;
+    border: none;
+}
+
+    .btn.btn-secondary:hover {
+        background: #f35151;
+    }
+
+.btn.btn-danger {
+    background: #c70a0a;
+    border: none;
+}
+
+.btn.btn-danger:hover {
+    background: #ff0000;
+}
+
+    .mb-0 {
+        margin: 5px 0 0;
+        font-size: 24px;
+    }
 
 .imgE {
     display: block;
@@ -26,7 +53,6 @@
 
 
 .botonC {
-    
     position: relative;
     padding: 10px 20px;
     font-size: 15px;
@@ -50,11 +76,11 @@
         transition: .3s;
     }
 
-    .botonC:hover span{
+    .botonC:hover span {
         left: -10%;
     }
 
-    .botonC:hover{
+    .botonC:hover {
         color: #00ff00;
         background: #008001;
         box-shadow: 0 5px 5px rgba(0, 0, 0, .7);

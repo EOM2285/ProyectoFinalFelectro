@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pqscn1o1gdPAp6kE3zO23f4J5SBS+HnJs8jrlhSakdk=",
+  "Hash": "D4vfWD48vcTmUGcuoRkJ2Te9p2HSzrC7cy/oj9L5lTc=",
   "Source": "PAWS_ProyectoFinal",
   "BasePath": "_content/PAWS_ProyectoFinal",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\card.css"
+    },
+    {
+      "Identity": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\css\\carrito.css",
+      "SourceId": "PAWS_ProyectoFinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\",
+      "BasePath": "_content/PAWS_ProyectoFinal",
+      "RelativePath": "css/carrito.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\carrito.css"
     },
     {
       "Identity": "C:\\Users\\Fabian\\Desktop\\II Cuatrimestre\\Programacion Avanzada Web\\Proyecto Final\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\wwwroot\\css\\createIndex.css",
