@@ -20,6 +20,8 @@ namespace PAWS_ProyectoFinal.Controllers
             HttpContext.Session.Remove("apellido");
             HttpContext.Session.Remove("correo");
             HttpContext.Session.Remove("Roll");
+            HttpContext.Session.Remove("Id");
+
             return View();
         }
 
@@ -37,26 +39,7 @@ namespace PAWS_ProyectoFinal.Controllers
                 HttpContext.Session.SetString("apellido", login.Apellidos);
                 HttpContext.Session.SetString("correo", login.Correo);
                 HttpContext.Session.SetString("Roll", login.RollId.ToString());
-
-
-                //HttpContext.Session.Remove("correo");
-
-
-                /*  NO BORRAR
-                // Verifica el rol del usuario
-                if (login.Id_rol == 1) // Rol 1 - Admin
-                {
-                    return RedirectToAction("Index", "Home");
-                }
-                else if (login.Id_rol == 2) // Rol 2 - Usuario normal
-                {
-                    return RedirectToAction("Index", "Home");
-                }
-            }
-               */
-
-
-
+                HttpContext.Session.SetString("Id", login.Id.ToString());
 
                 return RedirectToAction("Index", "Home");
             }

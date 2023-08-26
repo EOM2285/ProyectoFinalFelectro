@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace PAWS_ProyectoFinal.Models
 {
@@ -6,7 +7,8 @@ namespace PAWS_ProyectoFinal.Models
     {
         public int Id { get; set; }
         [DisplayName("Categoría")]
-        public string NombreCategoria { get; set; }
+		[Required(ErrorMessage = "Debe ingresar una categoria")]
+		public string NombreCategoria { get; set; }
         public List<Producto>? Productos { get; set; }
 
     }

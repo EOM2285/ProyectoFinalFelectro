@@ -9,7 +9,7 @@
 				<h2 class="mb-0" style="text-align:center">Editar <b>Producto</b></h2>
 			</div>
 			<div class="card-body">
-				<form asp-action="Edit" enctype="multipart/form-data" method="post">
+				<form asp-action="Edit" enctype="multipart/form-data" method="post" >
 					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 					<input type="hidden" asp-for="Id" />
 					<div class="row">
@@ -60,17 +60,16 @@
 							<div class="row">
 								<div class="col">
 									<div class="form-group">
-										<label asp-for="File" class="control-label"></label>
-										<input type="file" asp-for="File" class="form-control" />
-										<span asp-validation-for="File" class="text-danger"></span>
+										<label asp-for="File" class="control-label">Archivo de Imagen</label>
+										<input type="file"  asp-for="File" class="form-control" />										
 									</div>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col">
-									<div class="form-group">
-										
+									<div class="form-group">										
 										<img src="data:image/jpg; base64, @Model.ImagenProducto" class="imgE">
+										<input type="hidden" asp-for="ImagenProducto" />
 									</div>
 								</div>
 							</div>
