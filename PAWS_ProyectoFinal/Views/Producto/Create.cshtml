@@ -8,7 +8,7 @@
 				<h2 class="mb-0" style="text-align:center">Añadir <b>Producto</b></h2>
 			</div>
 			<div class="card-body">
-				<form asp-action="Create" enctype="multipart/form-data" method="post">
+				<form asp-action="Create" enctype="multipart/form-data" method="post" name="registroProd" onsubmit="return enviar()">
 					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 					<div class="row">
 						<div class="col">
@@ -67,7 +67,7 @@
 
 					</div>
 					<div class="form-group">
-						<input type="submit" onclick="CrearProducto()" style="margin-bottom: 20px; margin-top: 10px;" value="Crear" class="btn btn-primary" />
+						<input type="submit"  style="margin-bottom: 20px; margin-top: 10px;" value="Crear" class="btn btn-primary" />
 						<div>
 							<a asp-action="Index">Regresar</a>
 						</div>
@@ -82,8 +82,28 @@
 
 @section Scripts{
 	<script>
+		function enviar() {
+			event.preventDefault();
+
+			Swal.fire({
+				title: '¿Seguro desea agregar el producto?',
+				type: 'warning',
+				showCancelButton: true,
+				confirmButtonText: 'Si',
+				cancelButtonText: "No",
+				confirmButtonColor: '#3085d6',
+				cancelButtonColor: '#d33',
+			}).then((result) => {
+				if (result.value) {
+					document.registroProd.submit();
+				}
+				return false;
+			})
+		}
+
+		/*
 		function CrearProducto(){
 			Swal.fire('Producto Creado', 'Excelente!', 'success')
-		}
+		} */
 	</script>
 }
