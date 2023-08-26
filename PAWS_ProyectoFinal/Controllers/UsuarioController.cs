@@ -103,8 +103,8 @@ namespace PAWS_ProyectoFinal.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            return View(usuario);
-        }
+			return RedirectToAction(nameof(Index));
+		}
 
 
         //---------------------------------------------------------------------------------------------------------------------------------------------------
@@ -134,7 +134,7 @@ namespace PAWS_ProyectoFinal.Controllers
         
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Apellidos,Correo,Contrasena,Telefono,UltimaConexion,EstadoUsuario, RollId")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Apellidos,Correo,Contrasena,Telefono,UltimaConexion,EstadoUsuario")] Usuario usuario)
         {
             if (HttpContext.Session.GetString("nombre") == null)
             {
