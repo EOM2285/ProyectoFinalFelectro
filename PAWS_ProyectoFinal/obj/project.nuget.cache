@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3sm0Bdkxr2ToQP8eR1ldJCVF7mnWySI73Pq2R1G2RPmGNI2o2eM6WGZhPSmBwOBr/7mbINLei8g8L+ASA4qh+Q==",
+  "dgSpecHash": "Md6g9qrUk5GSoWy7h0Kubj/++YIOLiZLj1JPIqvRcc/YbgEs0Ze/pEZLGqXF2ebfi0t2RKmCarRQDnYkfGS9xA==",
   "success": true,
-  "projectFilePath": "C:\\Repositorio\\GitHub\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj",
+  "projectFilePath": "C:\\Repositorio\\Git\\ProyectoFinalFelectro\\PAWS_ProyectoFinal\\PAWS_ProyectoFinal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eddyo\\.nuget\\packages\\grpc.core\\2.46.6\\grpc.core.2.46.6.nupkg.sha512",
     "C:\\Users\\eddyo\\.nuget\\packages\\grpc.core.api\\2.46.6\\grpc.core.api.2.46.6.nupkg.sha512",
